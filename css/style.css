@@ -103,3 +103,16 @@ nav a img {
     display: flex;
     justify-content: space-around;
 }
+
+
+/*Carte*/
+
+ .card-container{
+     display: flex;
+    }
+
+.img-card{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
