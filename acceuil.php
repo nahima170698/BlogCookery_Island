@@ -12,7 +12,14 @@
 <body>
     <header>
         <?php include "module/moduleNavBar.php"; ?>
+        <div class="header">
+            <h1>Cookery Island</h1>
+        </div>
     </header>
+    <main>
+        <div class="acceuilPresentation"></div>
+        <div class="acceuilPresentation"></div>
+    </main>
 </body>
 
 </html>
