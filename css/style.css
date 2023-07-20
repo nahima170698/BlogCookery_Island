@@ -114,3 +114,13 @@ nav a img {
 
 
 
+
+
+
+
+
+.formConnexion{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-around;
+}
