@@ -1,4 +1,5 @@
-main{
+/* page admin main et footer */
+.formConnexion{
     margin-top: 4%;
     display: flex;
     justify-content: space-around;
