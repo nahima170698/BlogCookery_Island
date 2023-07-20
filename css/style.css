@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Copse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
 body {
     margin: 0;
     min-height: 100vh;
     background: #A3795D;
+}
+
+h1 {
+    font-family: 'Calistoga', cursive;
+    font-size: 70px;
 }
 /*NAVBAR*/
 nav {
@@ -17,7 +24,7 @@ nav a {
     text-decoration: none;
     color: black;
     font-family: 'Copse', serif;
-    font-size: 30;
+    font-size: 30px;
 }
 
 nav a:hover {
@@ -25,7 +32,7 @@ nav a:hover {
 }
 
 nav a img {
-    height: 8.5rem;
+    height: 10rem;
     background: inherit;
 }
 
@@ -73,13 +80,27 @@ nav a img {
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
   
+/*HEADER*/
+.header {
+    height: 25rem;
+    width: 80%;
+    margin-left: 10%;
+    background: url(../Images/backgroundHeader.jpg) center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Partie presentation page acceuil*/
+.acceuilPresentation {
+    display: inline-block;
+    height: 25rem;
+    width: 40%;
+    background: #E8E2DA;
+}
 
 
 
-  
-
-
-  
 .card{
     width: 15%;
     height: 25%;
@@ -93,13 +114,3 @@ nav a img {
 
 
 
-
-
-
-
-
-main{
-    margin-top: 4%;
-    display: flex;
-    justify-content: space-around;
-}
