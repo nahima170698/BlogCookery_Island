@@ -14,15 +14,23 @@
     <header>
         <nav>
             <a href=""><img src="Images/Logo.Cookery_Island.png" alt=""></a>
-            <a href="">Nos recettes</a>
-            <a href="">Cours de cuisine</a>
-            <a href="">Connexion</a>
+            <a class="lienNav" href="">Nos recettes</a>
+            <a class="lienNav" href="">Cours de cuisine</a>
+            <a class="lienNav" href="">Connexion</a>
             <div class="dropdown">
                 <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
                 <div class="dropdown-content">
-                    <a href="#">Link 1</a>
+                    <a href="#">Nos recettes</a>
                     <a href="#">Link 2</a>
                     <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="burger dropdown">
+                <button class="dropbtn"><img src="Images/lines_menu_burger_icon_123889_encorepluspetit.png" alt=""></button>
+                <div class="dropdown-content">
+                    <a href="index.php?page=contact">Contact</a>
+                    <a href="index.php?page=information">Information</a>
+                    <a href="index.php?page=connexion">Connexion</a>
                 </div>
             </div>
         </nav>

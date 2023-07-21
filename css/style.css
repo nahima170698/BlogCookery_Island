@@ -41,6 +41,7 @@ nav {
     align-items: center;
     background: #E8E2DA;
     height: 10rem;
+    position: relative;
 }
 
 nav a {
@@ -102,6 +103,22 @@ nav a img {
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {display: block;}
+
+  /* MENU BURGER */
+
+
+.burger {
+    display: none; 
+    background: inherit;
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 21px;
+    left: 942px;
+    cursor: pointer;
+}
   
 /*HEADER*/
 .header {
@@ -350,4 +367,20 @@ form div {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+.lienNav {
+    display: none;
+}
+
+.burger {
+    display: block;
+}
+
+
+
+}
+
+@media screen and (max-width: 767px){
+
 }
