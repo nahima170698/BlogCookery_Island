@@ -286,6 +286,16 @@ nav a img {
     min-height: 6rem;
     background: #E8E2DA;
     display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.5rem;
+  }
+
+  footer img {
+    height: 5rem;
+  }
+
+  footer p {
+    font-weight: bold;
   }
 
 
