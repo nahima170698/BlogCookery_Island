@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <header>
-        <p>nav a integrer avec include</p>
+        <?php
+            include "../module/moduleNavBar.php"
+        ?>
     </header>
 
     <main>
         <section class="formConnexion">
             <!-- form ajout recette -->
-            <form>
+            <form class="couleurFond">
                 <h3>Ajouter une recette</h3>
                 <div class="mb-3">
                     <label for="nomRecette" class="form-label">Nom recette</label>
                     <input type="text" class="form-control" id="nomRecette" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
-                    <label for="categorie" class="form-label">categorie</label>
+                    <label for="categorie" class="form-label">Categorie</label>
                     <input type="text" class="form-control" id="categorie" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="tempPreparation" class="form-label">Temps de Preparation</label>
                     <input type="text" class="form-control" id="tempPreparation" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="difficulte" class="form-label">Difficulte</label>
                     <input type="text" class="form-control" id="difficulte" aria-describedby="#">
                 </div>
             </form>
             <!-- form ajout ingredients -->
-            <form>
+            <form class="couleurFond">
                 <h3>Ajouter des ingrédients</h3>
                 <div class="mb-3">
                     <label for="ingredient1" class="form-label">Ingredient 1</label>
                     <input type="text" class="form-control" id="ingredient1" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="ingredient2" class="form-label">Ingredient 2</label>
                     <input type="text" class="form-control" id="ingredient2" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="ingredient3" class="form-label">Ingredient 3</label>
                     <input type="text" class="form-control" id="ingredient3" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="ingredient4" class="form-label">Ingredient 4</label>
                     <input type="text" class="form-control" id="ingredient4" aria-describedby="#">
@@ -84,23 +88,23 @@
                     <input type="text" class="form-control" id="ingredient10" aria-describedby="#">
                 </div>
             </form>
-        
+
         </section>
 
         <section class="formCorps">
             <!-- form ajout images + texte -->
-            <form>
+            <form class="couleurFond">
                 <h3>Ajouter texte et images</h3>
                 <div class="mb-3">
                     <label for="texte1" class="form-label">Texte 1</label>
                     <input type="text" class="form-control" id="Texte1" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="image1" class="form-label">image 1</label>
                     <input type="text" class="form-control" id="image1" aria-describedby="#">
                 </div>
-        
+
                 <div class="mb-3">
                     <label for="texte2" class="form-label">texte 2</label>
                     <input type="text" class="form-control" id="texte2" aria-describedby="#">
@@ -115,7 +119,9 @@
 
 
     <footer>
-        <p>©Cookery_Island corporation. Tous droits réservés.</p>
+    <?php
+            include "../module/moduleFooter.php";
+        ?>
     </footer>
 
 
@@ -124,4 +130,5 @@
 
 
 </body>
+
 </html>

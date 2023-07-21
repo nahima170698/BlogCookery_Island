@@ -309,7 +309,7 @@ nav a img {
 
 /* page admin/connexion */
 .formConnexion{
-    margin-top: 4%;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-around;
 }
@@ -317,7 +317,16 @@ nav a img {
 .formCorps{
     display: flex;
     justify-content: center;
-    margin: 3% 4%;
+    margin: 1rem 1rem;
+}
+
+.couleurFond{
+    background-color: #ddd;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+form div {
+    margin: 1rem;
 }
 /* ------------------------------ */
 
