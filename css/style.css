@@ -27,7 +27,7 @@ h3 {
     font-weight: 100;
 }
 
-p {
+p, label {
     font-family: 'Trocchi', serif;
     font-size: 20px;
 
@@ -307,13 +307,19 @@ nav a img {
 
 
 
-/* page admin */
+/* page admin/connexion */
 .formConnexion{
     margin-top: 4%;
     display: flex;
     justify-content: space-around;
 }
 
+.formCorps{
+    display: flex;
+    justify-content: center;
+    margin: 3% 4%;
+}
+/* ------------------------------ */
 
 /*Carte*/
 
