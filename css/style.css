@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Copse&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
 
 body {
     margin: 0;
@@ -11,6 +12,28 @@ h1 {
     font-family: 'Calistoga', cursive;
     font-size: 70px;
 }
+
+h2 {
+    font-family: 'Copse', serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: 'Copse', serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Trocchi', serif;
+    font-size: 20px;
+
+}
+
+
 /*NAVBAR*/
 nav {
     display: flex;
@@ -82,22 +105,188 @@ nav a img {
   
 /*HEADER*/
 .header {
-    height: 25rem;
+    min-height: 25rem;
     width: 80%;
     margin-left: 10%;
     background: url(../Images/backgroundHeader.jpg) center/cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 /* Partie presentation page acceuil*/
-.acceuilPresentation {
-    display: inline-block;
-    height: 25rem;
-    width: 40%;
+.accueilPremiereSection {
+    padding: 0 10%;
+    display: flex;
+}
+
+.accueilPresentation {
+    min-height: 25rem;
+    width: 50%;
     background: #E8E2DA;
 }
+
+#accueilPortrait {
+    border-left: 2px solid black;
+    text-align: center;
+}
+
+#accueilPortrait img {
+    height: 10rem;
+    margin-top: 1rem;
+
+}
+
+.accueilTitreBienvenue {
+    width: 50%;
+    margin-left: 10rem;
+    margin-bottom: 1rem;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.photoProfil {
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+
+.accueilTextDescriptionBlog{
+    width: 50%;
+}
+
+.accueilTextDescriptionCookeryIsland {
+    width: 60%;
+    margin: 1rem auto;
+}
+
+/*Acceuil section recette*/
+
+.sectionCarte {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 35rem;
+  background: #E8E2DA;
+  padding: 2rem 0;
+}
+
+.carteContainer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.carte {
+    width: 80%;
+    min-height: 27rem;
+    background: white;
+    margin: auto;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.carteImageContainer {
+    display: block;
+    width: 100%;
+    height: 15rem;
+    background: red;
+    margin: 0rem auto 0 auto;  
+}
+
+.carteImage {
+    object-fit: cover;
+}
+
+.difficulteTempsRecette {
+    display: flex;
+    justify-content: space-between;
+}
+
+.difficulteTempsRecette p {
+    margin: 0;
+}
+
+.icone {
+    height: 3rem;
+    width: 3rem;
+}
+
+.boutonCarte {
+    height: 2rem;
+    width: 40%;
+    margin-top: 1rem;
+    background: #A3795D;
+    font-family: 'Trocchi', serif;
+    font-size: 16px;
+}
+
+.boutonCarte:hover {
+    background: #E8E2DA;
+    cursor: pointer;
+}
+
+.lienVersRecette {
+    display: block;
+    background: white;
+    width: 10%;
+    height: 2rem;
+    text-decoration: none;
+    color: black;
+    margin: 2rem auto;
+    font-family: 'Trocchi', serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Acceuil Section Cours de cuisine*/
+
+.acceuilSectionCours {
+    min-height: 22rem;
+    background: #E8E2DA;
+    margin: 0 10%;
+}
+
+.acceuilCoursTitre {
+    margin-top: 0;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.acceuilImageCours {
+    height: 12rem;
+}
+
+.acceuilTextCours {
+    width: 30%;
+    text-align: center;
+    
+}
+
+/*Acceuil Section Instagram*/
+
+.fontLogo {
+    background: #A3795D;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 5px;
+    padding: auto;
+    border-radius: 150px;
+  }
+  
+  .fontLogo i {
+    margin-top: 40px;
+    margin-left: 26px;
+  }
+
+  footer {
+    min-height: 6rem;
+    background: #E8E2DA;
+    display: flex;
+  }
 
 
 
