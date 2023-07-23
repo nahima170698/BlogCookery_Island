@@ -367,6 +367,96 @@ nav a img {
 
 /* Partie ingredient */
 
+.articleIngredientContainer {
+    min-height: 10rem;
+    width: 80%;
+    margin: 2rem auto;
+    background: #e8e2da;
+    box-shadow: 5px 5px 10px 1px #000;    
+}
+
+.placementIngredient {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.placementIngredient li {
+    margin-left: 20%;
+}
+
+/* Partie premier texte */
+
+.articleTextContainer {
+    min-height: 10rem;
+    width: 80%;
+    margin: 2rem auto;
+    background: #e8e2da;
+    box-shadow: 5px 5px 10px 1px #000;  
+    padding: 1rem 10%;
+}
+
+.articleTextContainer p {
+    white-space:pre-line;
+}
+
+/* Partie commentaire */
+
+.commentaire {
+    width: 80%;
+    margin: 2rem auto;
+    background: #e8e2da;   
+    box-shadow: 5px 5px 10px 1px #000; 
+    padding: 1rem 10%;
+}
+
+.commentaireUnique {
+    border: 2px solid black;
+    margin-bottom: 1rem;
+    padding-left: 5%;
+}
+
+.commentaire p {
+    white-space:pre-line;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.ajoutCommentaire {
+    width: 80%;
+    min-height: 10rem;
+    margin: 2rem auto;
+    background: #e8e2da;   
+    box-shadow: 5px 5px 10px 1px #000; 
+    padding: 1rem 10%;
+}
+
+.createCommentaire {
+    width: 100%;
+}
+
+.createCommentaireBouton {
+    display: block;
+    height: 2rem;
+    width: 25%;
+    font-family: "Trocchi", serif;
+    font-size: 20px;
+    background: #a3795d;
+}
+
+.createCommentaireBouton:hover {
+    background: #e8e2da;
+}
+
+
+
+
+
+
+
 
 /* page admin/connexion */
 .formConnexion {
@@ -397,6 +487,7 @@ footer {
     background: #e8e2da;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     padding-top: 0.5rem;
   }
   
@@ -443,7 +534,8 @@ footer {
     font-size: 25px;
   }
 
-  p {
+  p,
+  label{
     font-size: 16px;
     line-height: 2rem;
     text-align: justify;
@@ -508,6 +600,14 @@ footer {
   }
 }
 
+/* Partie commentaire */
+  
+.createCommentaireBouton {
+    width: 30%;
+    font-size: 16px;
+    line-height: 2rem;
+}
+
 @media screen and (max-width: 767px) {
   /* Navbar et header*/
 
@@ -552,7 +652,8 @@ footer {
     font-size: 25px;
   }
 
-  p {
+  p,
+  label {
     font-size: 16px;
     line-height: 2rem;
     text-align: justify;
@@ -671,6 +772,24 @@ footer {
   .articleImageRecette {
     height: 19rem;
   }
+
+  /* Partie ingredient Article */
+  
+.placementIngredient {
+    grid-template-columns: 100%;
+}
+
+.placementIngredient li {
+    margin-left: 10%;
+}
+  
+/* Partie commentaire */
+  
+.createCommentaireBouton {
+    width: 40%;
+    font-size: 16px;
+    line-height: 2rem;
+}
   
   footer {
     min-height: 4rem;
@@ -685,5 +804,6 @@ footer {
     width: 70%;
     text-align: center;
     margin-top: 0.5rem;
+    white-space:pre-line;
   }
 }

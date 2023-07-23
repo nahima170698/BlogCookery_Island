@@ -26,18 +26,119 @@
         <section class="articleImageRecetteContainer">
             <img class="articleImageRecette" src="../Images\miniBurger.jpg" alt="Les minis burger">
         </section>
-        
+
         <!-- Partie ingredients -->
 
-        <section -class="articleIngredientContainer">
+        <section class="articleIngredientContainer">
             <ul class="placementIngredient">
-
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
+                <li>
+                    <p>Une quantité d un ingredient</P>
+                </li>
             </ul>
         </section>
 
+        <!-- Partie premier champ de texte -->
 
+        <section class="articleTextContainer">
+            <p>Recette du mini burger
+                Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut
+                Presentation du blog rapide</p>
+        </section>
+
+        <!-- Partie deuxieme image -->
+
+        <section class="articleImageRecetteContainer">
+            <img class="articleImageRecette" src="../Images\miniBurger2.jpg" alt="Les minis burger">
+        </section>
+
+        <!-- Partie deuxieme champ de texte -->
+
+        <section class="articleTextContainer">
+            <p>Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut
+                Presentation du blog rapide
+
+                Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut</p>
+        </section>
+
+        <section class="commentaire">
+            <h2>Commentaire</h2>
+            <div class="commentaireUnique">
+                <p class="bold">Pseudo</p>
+                <p>Cupcake ipsum dolor sit fruitcake muffin. Sweet bonbon candy powder
+                    cheesecake muffin sesame snaps jujubes. Muffin macaroon cheesec
+                    cookie souffl peacute; cookie cheesecake lollipop candy canes.
+                    Halvah cotton candy sesame snaps chocolate bar. Suga
+                </p>
+            </div>
+            <div class="commentaireUnique">
+                <p class="bold">Pseudo</p>
+                <p>Cupcake ipsum dolor sit fruitcake muffin. Sweet bonbon candy powder
+                    cheesecake muffin sesame snaps jujubes. Muffin macaroon cheesec
+                    cookie souffl peacute; cookie cheesecake lollipop candy canes.
+                    Halvah cotton candy sesame snaps chocolate bar. Suga
+                </p>
+            </div>
+            <div class="commentaireUnique">
+                <p class="bold">Pseudo</p>
+                <p>Cupcake ipsum dolor sit fruitcake muffin. Sweet bonbon candy powder
+                    cheesecake muffin sesame snaps jujubes. Muffin macaroon cheesec
+                    cookie souffl peacute; cookie cheesecake lollipop candy canes.
+                    Halvah cotton candy sesame snaps chocolate bar. Suga
+                </p>
+            </div>
+            <div class="commentaireUnique">
+                <p class="bold">Pseudo</p>
+                <p>Cupcake ipsum dolor sit fruitcake muffin. Sweet bonbon candy powder
+                    cheesecake muffin sesame snaps jujubes. Muffin macaroon cheesec
+                    cookie souffl peacute; cookie cheesecake lollipop candy canes.
+                    Halvah cotton candy sesame snaps chocolate bar. Suga
+                </p>
+            </div>
+            <div class="commentaireUnique">
+                <p class="bold">Pseudo</p>
+                <p>Cupcake ipsum dolor sit fruitcake muffin. Sweet bonbon candy powder
+                    cheesecake muffin sesame snaps jujubes. Muffin macaroon cheesec
+                    cookie souffl peacute; cookie cheesecake lollipop candy canes.
+                    Halvah cotton candy sesame snaps chocolate bar. Suga
+                </p>
+            </div>
+        </section>
+
+        <section class="ajoutCommentaire">
+            <h3>Ajoutez un commentaire</h3>
+            <form action="">
+                <textarea class="createCommentaire" name="" id="" cols="30" rows="10"></textarea>
+                <input class="createCommentaireBouton" type="submit" value="Poster">
+            </form>
+
+        </section>
+    
     </main>
-
+    
     <footer>
         <?php include "../module/moduleFooter.php" ?>
     </footer>
