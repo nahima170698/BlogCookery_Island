@@ -1,42 +1,53 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>BlogCookery_Island</title>
+    <link rel="shortcut icon" href="../Images/Logo.Cookery_Island.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cookery_Island Les mini burgers</title>
 </head>
 
-<header>
-<?php
-include "module/moduleNavBar.php"
-?>
-</header>
-
 <body>
+
+    <header>
+        <?php include "../module/moduleNavBar.php"  ?>
+        <div class="header">
+            <h1>Les mini burgers</h1>
+        </div>
+    </header>
+
     <main>
-        <section class="card-container">
-            <h3>Entrées</h3>
-            <div class="containergrid">
-                <div class="card">
-                    <img src="Images\Crêpes_saumon.jpg" alt="Crêpes">
-                    <div class="text-card">
-                        <p>Difficulté</p>
-                        <p>Temps</p>
-                    </div>
-                    <h2>Crêpes-saumon</h2>
-                    <div class="img-card">
-                        <div class="logo-card">
-                            <img src="Images\icone_drapeau-bretagne.webp" alt="bretagne">
-                            <img src="Images\Icone-entrée.png" alt="entrée">
-                        </div>
-                        <button type="submit">
-                        Voir recettes
-                        </button>
-                    </div>
-                </div>
-            </div>
+
+        <!-- Partie premiere image -->
+
+        <section class="articleImageRecetteContainer">
+            <img class="articleImageRecette" src="../Images\miniBurger.jpg" alt="Les minis burger">
         </section>
+        
+        <!-- Partie ingredients -->
+
+        <section -class="articleIngredientContainer">
+            <ul class="placementIngredient">
+
+            </ul>
+        </section>
+
+
     </main>
+
+    <footer>
+        <?php include "../module/moduleFooter.php" ?>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

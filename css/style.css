@@ -1,186 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Copse&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Trocchi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Copse&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trocchi&display=swap");
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    background: #A3795D;
+  margin: 0;
+  min-height: 100vh;
+  background: #a3795d;
 }
 
 h1 {
-    font-family: 'Calistoga', cursive;
-    font-size: 70px;
+  font-family: "Calistoga", cursive;
+  font-size: 70px;
 }
 
 h2 {
-    font-family: 'Copse', serif;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 100;
+  font-family: "Copse", serif;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 100;
 }
 
 h3 {
-    font-family: 'Copse', serif;
-    font-size: 30px;
-    text-align: center;
-    font-weight: 100;
+  font-family: "Copse", serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 100;
 }
 
-p, label {
-    font-family: 'Trocchi', serif;
-    font-size: 20px;
+p,
+label {
+  font-family: "Trocchi", serif;
+  font-size: 20px;
 }
-
 
 /*NAVBAR*/
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #E8E2DA;
-    height: 10rem;
-    position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #e8e2da;
+  height: 10rem;
+  position: relative;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Copse', serif;
-    font-size: 30px;
+  text-decoration: none;
+  color: black;
+  font-family: "Copse", serif;
+  font-size: 30px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 nav a img {
-    height: 10rem;
-    background: inherit;
+  height: 10rem;
+  background: inherit;
 }
 
 .logoProfil {
-    height: 5rem;
+  height: 5rem;
 }
 
 /*menu dropdown*/
 /* Dropdown Button */
 .dropbtn {
-    background-color: inherit;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
+  background-color: inherit;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
 
-  /* MENU BURGER */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* MENU BURGER */
 
 .burger {
-    display: none; 
-    background: inherit;
-    height: 5rem;
-    width: 5rem;
-    text-align: center;
-    align-items: center;
-    position: absolute;
-    top: 21px;
-    left: 942px;
-    cursor: pointer;
+  display: none;
+  background: inherit;
+  height: 5rem;
+  width: 20%;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  cursor: pointer;
 }
-  
+
 /*HEADER*/
 .header {
-    min-height: 25rem;
-    width: 80%;
-    margin-left: 10%;
-    background: url(../Images/backgroundHeader.jpg) center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #A3795D;
-    border-bottom: 2px solid #A3795D;
+  min-height: 25rem;
+  width: 80%;
+  margin-left: 10%;
+  background: url(../Images/backgroundHeader.jpg) center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-bottom: 1rem;
 }
 
 /* Partie presentation page acceuil*/
 .accueilPremiereSection {
-    padding: 0 10%;
-    display: flex;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .accueilPresentation {
-    min-height: 25rem;
-    width: 50%;
-    background: #E8E2DA;
-    border-top: 2px solid #A3795D;
-    border-bottom: 2px solid #A3795D;
+  min-height: 25rem;
+  width: 49%;
+  background: #e8e2da;
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-bottom: 1rem;
 }
 
 #accueilPortrait {
-    border-left: 2px solid black;
-    text-align: center;
+  text-align: center;
 }
 
 #accueilPortrait img {
-    height: 10rem;
-    margin-top: 1rem;
-
+  height: 10rem;
+  margin-top: 1rem;
 }
 
 .accueilTitreBienvenue {
-    width: 50%;
-    margin-left: 10rem;
-    margin-bottom: 1rem;
+  width: 50%;
+  margin-left: 10rem;
+  margin-bottom: 1rem;
 }
 
 .flexContainer {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .photoProfil {
-    height: 20rem;
-    margin-bottom: 1rem;
+  height: 20rem;
+  margin-bottom: 1rem;
 }
 
-.accueilTextDescriptionBlog{
-    width: 50%;
+.accueilTextDescriptionBlog {
+  width: 50%;
 }
 
 .accueilTextDescriptionCookeryIsland {
-    width: 60%;
-    margin: 1rem auto;
+  width: 60%;
+  margin: 1rem auto;
 }
 
 /*Acceuil section recette*/
@@ -189,420 +191,489 @@ nav a img {
   width: 80%;
   margin: 0 auto;
   min-height: 35rem;
-  background: #E8E2DA;
+  background: #e8e2da;
   padding: 2rem 0;
-  border-top: 2px solid #A3795D;
-  border-bottom: 2px solid #A3795D;
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-bottom: 1rem;
 }
 
 .carteContainer {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .carte {
-    width: 80%;
-    min-height: 27rem;
-    background: white;
-    margin: 4px auto;
-    padding: 1rem 1rem 0 1rem;
+  width: 80%;
+  min-height: 27rem;
+  background: white;
+  margin: 2rem auto;
+  padding: 1rem 1rem 0 1rem;
+  box-shadow: 5px 5px 10px 1px #000;
+  transition: 1s;
+}
+
+.carte:hover {
+    transform: scale(1.2)
 }
 
 .carteImageContainer {
-    display: block;
-    width: 100%;
-    height: 15rem;
-    background: red;
-    margin: 0rem auto 0 auto;  
+  display: block;
+  width: 100%;
+  height: 15rem;
+  background: red;
+  margin: 0rem auto 0 auto;
 }
 
-.carteImage {
-    object-fit: cover;
-}
 
 .difficulteTempsRecette {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .difficulteTempsRecette p {
-    margin: 0;
+  margin: 0;
 }
 
 .icone {
-    height: 3rem;
-    width: 3rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .boutonCarte {
-    height: 2rem;
-    width: 40%;
-    margin-top: 1rem;
-    background: #A3795D;
-    font-family: 'Trocchi', serif;
-    font-size: 16px;
+  height: 2rem;
+  width: 40%;
+  margin-top: 1rem;
+  background: #a3795d;
+  font-family: "Trocchi", serif;
+  font-size: 16px;
 }
 
 .boutonCarte:hover {
-    background: #E8E2DA;
-    cursor: pointer;
+  background: #e8e2da;
+  cursor: pointer;
 }
 
-.lienVersRecette {
-    display: block;
-    background: white;
-    width: 10%;
-    height: 2rem;
-    text-decoration: none;
-    color: black;
-    margin: 2rem auto;
-    font-family: 'Trocchi', serif;
-    font-size: 20px;
-    text-align: center;
+.lienVersPage {
+  display: block;
+  background: white;
+  width: 10%;
+  height: 2rem;
+  text-decoration: none;
+  color: black;
+  margin: 2rem auto;
+  font-family: "Trocchi", serif;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-bottom: 1rem;
+  transition: 1s;
+}
+
+.lienVersPage:hover {
+    transform: translateY(-10px);
 }
 
 /*Acceuil Section Cours de cuisine*/
 
 .acceuilSectionCours {
-    min-height: 22rem;
-    background: #E8E2DA;
-    margin: 0 10%;
-    border-top: 2px solid #A3795D;
-    border-bottom: 2px solid #A3795D;
+  min-height: 22rem;
+  background: #e8e2da;
+  margin: 0 10%;
+  border-top: 2px solid #a3795d;
+  border-bottom: 2px solid #a3795d;
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-bottom: 1rem;
 }
 
 .acceuilCoursTitre {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .flexContainer {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .acceuilImageCours {
-    height: 12rem;
+  height: 12rem;
 }
 
 .acceuilTextCours {
-    width: 30%;
+  width: 30%;
+  text-align: center;
+}
+
+.lienVersPageWith50 {
+    display: block;
+    background: white;
+    width: 35%;
+    height: 2rem;
+    text-decoration: none;
+    color: black;
+    margin: 2rem auto;
+    font-family: "Trocchi", serif;
+    font-size: 20px;
     text-align: center;
-    
+    box-shadow: 5px 5px 10px 1px #000;
+    margin-bottom: 1rem;
+    transition: 1s;
+  }
+  
+  .lienVersPageWith50:hover {
+    transform: translateY(-10px);
 }
 
 /*Acceuil Section Instagram*/
 
 .fontLogo {
-    background: #A3795D;
-    width: 5rem;
-    height: 5rem;
-    margin: 0 5px;
-    padding: auto;
-    border-radius: 150px;
-  }
-  
-  .fontLogo i {
-    margin-top: 40px;
-    margin-left: 26px;
-  }
-
-  footer {
-    min-height: 6rem;
-    background: #E8E2DA;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 0.5rem;
-  }
-
-  footer img {
-    height: 5rem;
-  }
-  
-  footer p {
-    font-weight: bold;
-  }
-
-
-
-.card{
-    width: 15%;
-    height: 25%;
+  background: #a3795d;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 5px;
+  padding: auto;
+  border-radius: 150px;  
+  box-shadow: 5px 5px 10px 1px #000;
+  margin-bottom: 1rem;
+  transition: 1s;
 }
-
-.card img{
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
-/* page admin/connexion */
-.formConnexion{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.formCorps{
-    display: flex;
-    justify-content: center;
-    margin: 1rem 1rem;
-}
-
-.couleurFond{
-    background-color: #ddd;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-form div {
-    margin: 1rem;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px){
-/* Navbar et header*/
-
-nav {
-    padding: 0.5rem 10%;
-    justify-content: space-between;
-}
-
-.lienNav {
-    display: none;
-}
-
-.burger {
-    display: block;
-    top: 38px;
-    left: 476px;
-}
-
-.header {
-    min-height: 15rem;
-}
-
-/*Changement de police*/
-
-h1 {
-    font-size: 40px;
-}
-
-h2 {
-    font-size: 35px;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 2rem;
-    text-align: justify;
-}
-
-/*PAGE ACCEUIL*/
-/*Partie presentation accueil*/
-
-.accueilPremiereSection {
-    display: block;
-}
-
-.accueilPresentation {
-    min-height: 30rem;
-    width: 100%;
-}
-
-#accueilPortrait {
-    border-left: 0px;
-}
-
-#accueilPortrait img {
-    margin-bottom: 2rem;
-}
-
-/*Partie Recette Accueil*/
-
-.carteContainer {
-    grid-template-columns: 50% 50%;
-}
-
-.carte {
-    min-height: 26rem;
-}
-
-.lienVersRecette {
-    width: 20%;
-    margin-bottom: 1rem;
-}
-
-/*Partie Cours de cuisine Accueil*/
-
-.acceuilSectionCours {
-    padding: 1rem 0;
-}
-
-}
-
-@media screen and (max-width: 767px){
-
-/* Navbar et header*/
-
-nav {
-    padding: 0.5rem 0;
-    justify-content: space-between;
-}
-
-nav a img {
-    height: 9rem;
-    margin-left: 1rem;
-}
-
-.dropdown-content {
-    right: 5px;
-}
-
-.lienNav {
-    display: none;
-}
-
-.burger {
-    display: block;
-    top: 38px;
-    left: 175px;
-}
-
-.header {
-    min-height: 8rem;
-}
-
-/*Changement de police*/
-
-h1 {
-    font-size: 30px;
-}
-
-h2 {
-    font-size: 25px;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 2rem;
-    text-align: justify;
-}
-
-/*PAGE ACCEUIL*/
-/*Partie presentation accueil*/
-
-
-.accueilTitreBienvenue {
-    width: 100%;
-    margin-left: 0;
-}
-
-.accueilPremiereSection {
-    display: block;
-}
-
-.flexContainer {
-    display: block;
-    padding: 0 5%;
-}
-
-.accueilPresentation {
-    min-height: 30rem;
-    width: 100%;
-    border-top: 2px solid #A3795D;
-    border-bottom: 2px solid #A3795D;
-}
-
-.photoProfil {
-    display: block;
-    height: 15rem;
-    margin: 2rem auto;
-}
-
-#accueilPortrait {
-    border-left: 0px;
-}
-
-#accueilPortrait img {
-    margin-bottom: 2rem;
-}
-
-.accueilTextDescriptionBlog {
-    width: 100%;
-}
-
-.accueilTextDescriptionCookeryIsland {
-    width: 90%;
-}
-
-/*Partie Recette Accueil*/
-
-.sectionCarte {
-    border-top: 2px solid #A3795D;
-    border-bottom: 2px solid #A3795D;
-}
-
-.carteContainer {
-    grid-template-columns: 100%;
-}
-
-.carte {
-    min-height: 26rem;
-    margin-top: 3rem;
-}
-
-.lienVersRecette {
-    width: 35%;
-    margin-bottom: 1rem;
-}
-
-/*Partie Cours de cuisine Accueil*/
-
-.acceuilSectionCours {
-    padding: 1rem 0;
-    border-top: 2px solid #A3795D;
-    border-bottom: 2px solid #A3795D;
-}
-
-.acceuilImageCours {
-    display: block;
-    margin: O auto;
-}
-
-.acceuilTextCours {
-    width: 90%;
-}
-
-/*Partie reseaux sociaux*/
-
-.fontLogo {
-    width: 4rem;
-    height: 4rem;
-    margin-bottom: 1rem;
+.fontLogo:hover {
+    transform: scale(1.2)
 }
 
 .fontLogo i {
-    margin-top: 33px;
-    margin-left: 30%;
+  margin-top: 40px;
+  margin-left: 26px;
 }
 
+/* Page article */
+
+/* Partie premiere image*/
+
+.articleImageRecetteContainer {
+    background: #e8e2da;
+    width: 50%;
+    height: 30rem;
+    margin: 1rem auto;
+    box-shadow: 5px 5px 10px 1px #000;
+    padding: 0.5rem 5%;
+    
+}
+
+.articleImageRecette {
+    width: 100%;
+    height: 28rem;
+    margin: auto; 
+}
+
+/* Partie ingredient */
+
 footer {
-    min-height: 4rem;
+  min-height: 6rem;
+  background: #e8e2da;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 0.5rem;
 }
 
 footer img {
+  height: 5rem;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+/* page admin/connexion */
+.formConnexion {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.formCorps {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 1rem;
+}
+
+.couleurFond {
+  background-color: #ddd;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+form div {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Navbar et header*/
+
+  nav {
+    padding: 0.5rem 10%;
+    justify-content: space-between;
+  }
+
+  .lienNav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    top: 38px;
+  }
+
+  .header {
+    min-height: 15rem;
+  }
+
+  /*Changement de police*/
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  /*PAGE ACCEUIL*/
+  /*Partie presentation accueil*/
+
+  .accueilPremiereSection {
+    display: block;
+  }
+
+  .accueilPresentation {
+    min-height: 30rem;
+    width: 100%;
+  }
+
+  #accueilPortrait {
+    border-left: 0px;
+  }
+
+  #accueilPortrait img {
+    margin-bottom: 2rem;
+  }
+
+  /*Partie Recette Accueil*/
+
+  .carteContainer {
+    grid-template-columns: 50% 50%;
+  }
+
+  .carte {
+    min-height: 26rem;
+  }
+
+  .lienVersPage{
+    width: 20%;
+    margin-bottom: 1rem;
+  }
+  
+  /*Partie Cours de cuisine Accueil*/
+
+  .acceuilSectionCours {
+    padding: 1rem 0;
+  }
+
+  .lienVersPageWith50 {
+    width: 50%;
+  }
+
+  /* Partie article */
+  
+  /* Partie image Article */
+  
+  .articleImageRecetteContainer {
+    width: 60%;
+    height: 25rem;
+  }
+  
+  .articleImageRecette {
+    height: 23rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Navbar et header*/
+
+  nav {
+    padding: 0.5rem 0;
+    justify-content: space-between;
+  }
+
+  nav a img {
+    height: 9rem;
+    margin-left: 1rem;
+  }
+
+  .dropdown-content {
+    right: 5px;
+  }
+
+  .lienNav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    top: 38px;
+  }
+
+  .header {
+    min-height: 8rem;
+  }
+
+  /*Changement de police*/
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  /*PAGE ACCEUIL*/
+  /*Partie presentation accueil*/
+
+  .accueilTitreBienvenue {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .accueilPremiereSection {
+    display: block;
+  }
+
+  .flexContainer {
+    display: block;
+    padding: 0 5%;
+  }
+
+  .accueilPresentation {
+    min-height: 30rem;
+    width: 100%;
+    border-top: 2px solid #a3795d;
+    border-bottom: 2px solid #a3795d;
+  }
+
+  .photoProfil {
+    display: block;
+    height: 15rem;
+    margin: 2rem auto;
+  }
+
+  #accueilPortrait {
+    border-left: 0px;
+  }
+
+  #accueilPortrait img {
+    margin-bottom: 2rem;
+  }
+
+  .accueilTextDescriptionBlog {
+    width: 100%;
+  }
+
+  .accueilTextDescriptionCookeryIsland {
+    width: 90%;
+  }
+
+  /*Partie Recette Accueil*/
+
+  .sectionCarte {
+    border-top: 2px solid #a3795d;
+    border-bottom: 2px solid #a3795d;
+  }
+
+  .carteContainer {
+    grid-template-columns: 100%;
+  }
+
+  .carte {
+    min-height: 26rem;
+    margin-top: 3rem;
+  }
+
+  .lienVersPage {
+    width: 35%;
+    margin-bottom: 1rem;
+  }
+
+  /*Partie Cours de cuisine Accueil*/
+
+  .acceuilSectionCours {
+    padding: 1rem 0;
+    border-top: 2px solid #a3795d;
+    border-bottom: 2px solid #a3795d;
+  }
+
+  .acceuilImageCours {
+    display: block;
+    margin: O auto;
+  }
+
+  .acceuilTextCours {
+    width: 90%;
+  }
+
+  .lienVersPageWith50 {
+    width: 35%;
+  }
+
+  /*Partie reseaux sociaux*/
+
+  .fontLogo {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .fontLogo i {
+    margin-top: 33px;
+    margin-left: 30%;
+  }
+
+    /* Partie article */
+  
+  /* Partie image Article */
+  
+  .articleImageRecetteContainer {
+    width: 80%;
+    height: 20rem;
+  }
+  
+  .articleImageRecette {
+    height: 19rem;
+  }
+  
+  footer {
+    min-height: 4rem;
+  }
+
+  footer img {
     height: 5rem;
   }
   
@@ -612,5 +683,4 @@ footer img {
     text-align: center;
     margin-top: 0.5rem;
   }
-
 }

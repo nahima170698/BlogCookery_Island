@@ -6,15 +6,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-
+    
     <title>Document</title>
 </head>
 <body>
-
+    
     <header>
-        <p>nav à integrer avec include</p>
+    
+    <?php include "../module/moduleNavBar.php"  ?>
+    <div class="header">
+        <h1>Connexion</h1>
+    </div>
+        
     </header>
-
+    
     <main class="formConnexion">
         <!-- formulaire de connexion -->
         <section>
@@ -51,7 +56,7 @@
                     <label for="email" class="form-label">adress mail</label>
                     <input type="email" class="form-control" id="email">
                 </div>
-
+                
                 <div class="mb-3">
                     <label for="mdp1" class="form-label">mot de passe</label>
                     <input type="password" class="form-control" id="mdp1">
@@ -67,10 +72,10 @@
         </section>
     </main>
     <footer>
-        <p>©Cookery_Island corporation. Tous droits réservés.</p>
+        <?php include "../module/moduleFooter.php" ?>
     </footer>
-
-
+    
+    
 
 
 

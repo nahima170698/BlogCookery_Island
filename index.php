@@ -13,10 +13,10 @@
 <body>
     <header>
         <nav>
-            <a href=""><img src="Images/Logo.Cookery_Island.png" alt=""></a>
-            <a class="lienNav" href="">Nos recettes</a>
-            <a class="lienNav" href="">Cours de cuisine</a>
-            <a class="lienNav" href="">Connexion</a>
+            <a href="index.php"><img src="Images/Logo.Cookery_Island.png" alt=""></a>
+            <a class="lienNav" href="php\blog.php">Nos recettes</a>
+            <a class="lienNav" href="php\article.php">Cours de cuisine</a>
+            <a class="lienNav" href="php\connexion.php">Connexion</a>
             <div class="dropdown">
                 <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
                 <div class="dropdown-content">
@@ -28,9 +28,9 @@
             <div class="burger dropdown">
                 <button class="dropbtn"><img src="Images/lines_menu_burger_icon_123889_encorepluspetit.png" alt=""></button>
                 <div class="dropdown-content">
-                    <a href="">Nos recettes</a>
+                    <a href="php\blog.php">Nos recettes</a>
                     <a href="">Cours de cuisine</a>
-                    <a href="">Connexion</a>
+                    <a href="php\connexion.php">Connexion</a>
                 </div>
             </div>
         </nav>
@@ -44,7 +44,7 @@
         Partie presentation -->
 
         <section class="accueilPremiereSection">
-            
+
             <div class="accueilPresentation">
                 <h2 class="accueilTitreBienvenue">Bienvenue chez Cookery Island</h2>
                 <div class="flexContainer">
@@ -59,16 +59,16 @@
                 <p class="accueilTextDescriptionCookeryIsland">Body Presentation de Cookery Island (type de cuisines, service etc)
                     Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocol</p>
             </div>
-
+        
         </section>
         
         <!-- Deuxieme section 
         Partie Recette -->
 
         <section class="sectionCarte">
-            <h2>Nos meilleurs recettes</h2> 
+            <h2>Nos meilleurs recettes</h2>
             <div class="carteContainer">
-
+                
                 <div class="carte">
                     <img class="carteImageContainer" src="Images/Breakfast.jpg" alt="">
                     <div class="difficulteTempsRecette">
@@ -79,12 +79,12 @@
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
                             <img class="icone" src="Images/istockphoto-1183041351-612x612-modified.png" alt="">
-                            <img class="icone" src="Images/istockphoto-1183041351-612x612-modified.png" alt="">
+                            <p>Recette francaise</p>
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
-
+                
                 <div class="carte">
                     <img class="carteImageContainer" src="Images/Pizza.jpg" alt="">
                     <div class="difficulteTempsRecette">
@@ -95,13 +95,13 @@
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
                             <img class="icone" src="Images/iconePlat (2)-modified.png" alt="">
-                            <img class="icone" src="Images/iconePlat (2)-modified.png" alt="">
-
+                            <p>recette réunionnaise</p>
+                        
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
-
+                
                 <div class="carte">
                     <img class="carteImageContainer" src="Images/MilleFeulle.jpg" alt="">
                     <div class="difficulteTempsRecette">
@@ -112,13 +112,13 @@
                     <div class="difficulteTempsRecette">
                         <div>
                             <img class="icone" src="Images/dessert-modified.png" alt="">
-                            <img class="icone" src="Images/dessert-modified.png" alt="">
+                            <p>recette indienne</p>
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
             </div>
-            <a class="lienVersRecette" href="">voir plus</a>
+            <a class="lienVersPage" href="php\blog.php">voir plus</a>
         </section>
 
         <!-- Troisieme section 
@@ -131,12 +131,26 @@
                 <div class="acceuilTextCours">
                     <p>Liste de style de cuisine disponible
                         Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi</p>
-                    <input class="boutonCarte" type="button" value="Reservez ici">
+                    <a class="lienVersPageWith50" href="">voir plus</a>
                 </div>
             </div>
         </section>
+
+        <!-- Quatriene section 
+        Partie Connexion -->
         
-        <!-- Quatrieme section 
+        <section class="acceuilSectionCours">
+            <h2 class="acceuilCoursTitre">Commentez nos recettes</h2>
+            <div class="flexContainer">
+                <div class="acceuilTextCours">
+                    <p>Venez vous connecter ou inscrivez-vous a notre blog pour pouvoir, vous aussi comme de nombreux autres inscris, commenter nos articles</p>
+                    <a class="lienVersPageWith50" href="php\connexion.php">voir plus</a>
+                </div>
+                <img class="acceuilImageCours" src="Images/connexionAccueil.jpg" alt="Cours de cuisine">
+            </div>
+        </section>
+        
+        <!-- Cinquieme section 
            Partie reseaux sociaux -->
         <section class="header">
             <h2>Suivez nous sur Instagram</h2><br>
@@ -148,7 +162,7 @@
 
 
     <footer>
-        <img class="logoFooter" src="Images/Logo.Cookery_Island.png" alt="Logo Cookery Island">
+        <a href="index.php"><img class="logoFooter" src="Images/Logo.Cookery_Island.png" alt="Logo Cookery Island"></a>
         <p>©Cookery_Island's corporation. Tous droits réservés.</p>
     </footer>
 </body>
