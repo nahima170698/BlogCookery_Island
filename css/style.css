@@ -30,7 +30,6 @@ h3 {
 p, label {
     font-family: 'Trocchi', serif;
     font-size: 20px;
-
 }
 
 
@@ -130,6 +129,8 @@ nav a img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid #A3795D;
+    border-bottom: 2px solid #A3795D;
 }
 
 /* Partie presentation page acceuil*/
@@ -142,6 +143,8 @@ nav a img {
     min-height: 25rem;
     width: 50%;
     background: #E8E2DA;
+    border-top: 2px solid #A3795D;
+    border-bottom: 2px solid #A3795D;
 }
 
 #accueilPortrait {
@@ -188,6 +191,8 @@ nav a img {
   min-height: 35rem;
   background: #E8E2DA;
   padding: 2rem 0;
+  border-top: 2px solid #A3795D;
+  border-bottom: 2px solid #A3795D;
 }
 
 .carteContainer {
@@ -199,7 +204,7 @@ nav a img {
     width: 80%;
     min-height: 27rem;
     background: white;
-    margin: auto;
+    margin: 4px auto;
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -262,6 +267,8 @@ nav a img {
     min-height: 22rem;
     background: #E8E2DA;
     margin: 0 10%;
+    border-top: 2px solid #A3795D;
+    border-bottom: 2px solid #A3795D;
 }
 
 .acceuilCoursTitre {
@@ -310,7 +317,7 @@ nav a img {
   footer img {
     height: 5rem;
   }
-
+  
   footer p {
     font-weight: bold;
   }
@@ -355,32 +362,255 @@ nav a img {
 form div {
     margin: 1rem;
 }
-/* ------------------------------ */
 
-/*Carte*/
-
- .card-container{
-     display: flex;
-    }
-
-.img-card{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
 @media screen and (min-width: 768px) and (max-width: 1024px){
+/* Navbar et header*/
+
+nav {
+    padding: 0.5rem 10%;
+    justify-content: space-between;
+}
+
 .lienNav {
     display: none;
 }
 
 .burger {
     display: block;
+    top: 38px;
+    left: 476px;
 }
 
+.header {
+    min-height: 15rem;
+}
 
+/*Changement de police*/
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+/*PAGE ACCEUIL*/
+/*Partie presentation accueil*/
+
+.accueilPremiereSection {
+    display: block;
+}
+
+.accueilPresentation {
+    min-height: 30rem;
+    width: 100%;
+}
+
+#accueilPortrait {
+    border-left: 0px;
+}
+
+#accueilPortrait img {
+    margin-bottom: 2rem;
+}
+
+/*Partie Recette Accueil*/
+
+.carteContainer {
+    grid-template-columns: 50% 50%;
+}
+
+.carte {
+    min-height: 26rem;
+}
+
+.lienVersRecette {
+    width: 20%;
+    margin-bottom: 1rem;
+}
+
+/*Partie Cours de cuisine Accueil*/
+
+.acceuilSectionCours {
+    padding: 1rem 0;
+}
 
 }
 
 @media screen and (max-width: 767px){
+
+/* Navbar et header*/
+
+nav {
+    padding: 0.5rem 0;
+    justify-content: space-between;
+}
+
+nav a img {
+    height: 9rem;
+    margin-left: 1rem;
+}
+
+.dropdown-content {
+    right: 5px;
+}
+
+.lienNav {
+    display: none;
+}
+
+.burger {
+    display: block;
+    top: 38px;
+    left: 175px;
+}
+
+.header {
+    min-height: 8rem;
+}
+
+/*Changement de police*/
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+/*PAGE ACCEUIL*/
+/*Partie presentation accueil*/
+
+
+.accueilTitreBienvenue {
+    width: 100%;
+    margin-left: 0;
+}
+
+.accueilPremiereSection {
+    display: block;
+}
+
+.flexContainer {
+    display: block;
+    padding: 0 5%;
+}
+
+.accueilPresentation {
+    min-height: 30rem;
+    width: 100%;
+    border-top: 2px solid #A3795D;
+    border-bottom: 2px solid #A3795D;
+}
+
+.photoProfil {
+    display: block;
+    height: 15rem;
+    margin: 2rem auto;
+}
+
+#accueilPortrait {
+    border-left: 0px;
+}
+
+#accueilPortrait img {
+    margin-bottom: 2rem;
+}
+
+.accueilTextDescriptionBlog {
+    width: 100%;
+}
+
+.accueilTextDescriptionCookeryIsland {
+    width: 90%;
+}
+
+/*Partie Recette Accueil*/
+
+.sectionCarte {
+    border-top: 2px solid #A3795D;
+    border-bottom: 2px solid #A3795D;
+}
+
+.carteContainer {
+    grid-template-columns: 100%;
+}
+
+.carte {
+    min-height: 26rem;
+    margin-top: 3rem;
+}
+
+.lienVersRecette {
+    width: 35%;
+    margin-bottom: 1rem;
+}
+
+/*Partie Cours de cuisine Accueil*/
+
+.acceuilSectionCours {
+    padding: 1rem 0;
+    border-top: 2px solid #A3795D;
+    border-bottom: 2px solid #A3795D;
+}
+
+.acceuilImageCours {
+    display: block;
+    margin: O auto;
+}
+
+.acceuilTextCours {
+    width: 90%;
+}
+
+/*Partie reseaux sociaux*/
+
+.fontLogo {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.fontLogo i {
+    margin-top: 33px;
+    margin-left: 30%;
+}
+
+footer {
+    min-height: 4rem;
+}
+
+footer img {
+    height: 5rem;
+  }
+  
+  footer p {
+    font-weight: bold;
+    width: 70%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 
 }

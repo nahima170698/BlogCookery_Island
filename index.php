@@ -28,9 +28,9 @@
             <div class="burger dropdown">
                 <button class="dropbtn"><img src="Images/lines_menu_burger_icon_123889_encorepluspetit.png" alt=""></button>
                 <div class="dropdown-content">
-                    <a href="index.php?page=contact">Contact</a>
-                    <a href="index.php?page=information">Information</a>
-                    <a href="index.php?page=connexion">Connexion</a>
+                    <a href="">Nos recettes</a>
+                    <a href="">Cours de cuisine</a>
+                    <a href="">Connexion</a>
                 </div>
             </div>
         </nav>
@@ -39,7 +39,12 @@
         </div>
     </header>
     <main>
+
+        <!-- Premiere section 
+        Partie presentation -->
+
         <section class="accueilPremiereSection">
+            
             <div class="accueilPresentation">
                 <h2 class="accueilTitreBienvenue">Bienvenue chez Cookery Island</h2>
                 <div class="flexContainer">
@@ -48,15 +53,22 @@
                         Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut</p>
                 </div>
             </div>
+
             <div class="accueilPresentation" id="accueilPortrait">
                 <img src="Images/Logo.Cookery_Island.png" alt="">
                 <p class="accueilTextDescriptionCookeryIsland">Body Presentation de Cookery Island (type de cuisines, service etc)
                     Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocol</p>
             </div>
+
         </section>
+        
+        <!-- Deuxieme section 
+        Partie Recette -->
+
         <section class="sectionCarte">
-            <h2>Nos meilleurs recettes</h2>
+            <h2>Nos meilleurs recettes</h2> 
             <div class="carteContainer">
+
                 <div class="carte">
                     <img class="carteImageContainer" src="Images/Breakfast.jpg" alt="">
                     <div class="difficulteTempsRecette">
@@ -72,6 +84,7 @@
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
+
                 <div class="carte">
                     <img class="carteImageContainer" src="Images/Pizza.jpg" alt="">
                     <div class="difficulteTempsRecette">
@@ -88,6 +101,7 @@
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
+
                 <div class="carte">
                     <img class="carteImageContainer" src="Images/MilleFeulle.jpg" alt="">
                     <div class="difficulteTempsRecette">
@@ -106,6 +120,10 @@
             </div>
             <a class="lienVersRecette" href="">voir plus</a>
         </section>
+
+        <!-- Troisieme section 
+        Partie Cours de cuisine -->
+
         <section class="acceuilSectionCours">
             <h2 class="acceuilCoursTitre">Reservez vos places pour nos cours de cuisines</h2>
             <div class="flexContainer">
@@ -117,6 +135,9 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Quatrieme section 
+           Partie reseaux sociaux -->
         <section class="header">
             <h2>Suivez nous sur Instagram</h2><br>
             <a href="">
@@ -124,6 +145,8 @@
             </a>
         </section>
     </main>
+
+
     <footer>
         <img class="logoFooter" src="Images/Logo.Cookery_Island.png" alt="Logo Cookery Island">
         <p>©Cookery_Island's corporation. Tous droits réservés.</p>
