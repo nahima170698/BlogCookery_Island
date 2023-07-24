@@ -3,9 +3,7 @@ include ("connexionbdd.php");
 
 $test = new MaConnexion("", "", "root", "localhost");
 
-$inserRecette = $test->insertionRecette(
-    $_POST['Nom'], $_POST['Prenom'], $_POST['Mail'],
-);
+$inserRecette = $test->insertionRecette();
 
 
 
