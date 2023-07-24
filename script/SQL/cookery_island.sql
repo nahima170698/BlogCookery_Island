@@ -1,5 +1,6 @@
+CREATE DATABASE IF NOT EXISTS `cookery_island`;
 
-
+USE `cookery_island`;
 
 DROP TABLE IF EXISTS `commentaire`;
 CREATE TABLE IF NOT EXISTS `commentaire` (

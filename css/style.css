@@ -413,7 +413,8 @@ nav a img {
 
 .commentaireUnique {
     background: rgba(255, 255, 255, 0.59);
-    box-shadow: 4px 4px 6px 1px #000;
+    border: 1px solid black;
+    /* box-shadow: 4px 4px 6px 1px #000; */
     margin-bottom: 2rem;
     padding-left: 5%;
 }

@@ -23,13 +23,13 @@
 
         <!-- Partie premiere image -->
 
-        <section class="articleImageRecetteContainer">
+        <section class="articleImageRecetteContainer" id="image1">
             <img class="articleImageRecette" src="../Images\miniBurger.jpg" alt="Les minis burger">
         </section>
 
         <!-- Partie ingredients -->
 
-        <section class="articleIngredientContainer">
+        <section class="articleIngredientContainer" id="ingredient">
             <ul class="placementIngredient">
                 <li>
                     <p>Une quantité d un ingredient</P>
@@ -63,7 +63,7 @@
 
         <!-- Partie premier champ de texte -->
 
-        <section class="articleTextContainer">
+        <section class="articleTextContainer" id="text1">
             <p>Recette du mini burger
                 Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut
                 Presentation du blog rapide</p>
@@ -71,20 +71,20 @@
 
         <!-- Partie deuxieme image -->
 
-        <section class="articleImageRecetteContainer">
+        <section class="articleImageRecetteContainer" id="image2">
             <img class="articleImageRecette" src="../Images\miniBurger2.jpg" alt="Les minis burger">
         </section>
 
         <!-- Partie deuxieme champ de texte -->
 
-        <section class="articleTextContainer">
+        <section class="articleTextContainer" id="text2">
             <p>Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut
                 Presentation du blog rapide
 
                 Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut</p>
         </section>
 
-        <section class="commentaire">
+        <section class="commentaire" id="commentaire">
             <h2>Commentaire</h2>
             <div class="commentaireUnique">
                 <p class="bold">Pseudo</p>
@@ -127,7 +127,7 @@
                 </p>
             </div>
         </section>
-
+        
         <section class="ajoutCommentaire">
             <h3>Ajoutez un commentaire</h3>
             <form action="">
@@ -142,6 +142,8 @@
     <footer>
         <?php include "../module/moduleFooter.php" ?>
     </footer>
+
+   <script src="../script/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
