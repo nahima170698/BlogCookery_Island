@@ -28,6 +28,11 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
   `Ingredient_8` varchar(1000) NOT NULL,
   `Ingredient_9` varchar(1000) NOT NULL,
   `Ingredient_10` varchar(1000) NOT NULL,
+  `Ingredient_11` varchar(1000) NOT NULL,
+  `Ingredient_12` varchar(1000) NOT NULL,
+  `Ingredient_13` varchar(1000) NOT NULL,
+  `Ingredient_14` varchar(1000) NOT NULL,
+  `Ingredient_15` varchar(1000) NOT NULL,
   PRIMARY KEY (`ID_Ingredient`),
   KEY `ID_Recette` (`ID_Recette`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

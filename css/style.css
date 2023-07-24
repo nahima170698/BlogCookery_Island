@@ -462,9 +462,49 @@ nav a img {
 
 /* page admin/connexion */
 .formConnexion {
-  margin-top: 1rem;
+  margin: 1rem auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 80%;
+
+}
+
+.partieConnexion {
+  width: 45%;
+  background: #e8e2da;
+  padding: 1rem 2%;
+  box-shadow: 5px 5px 10px 1px #000;
+  text-align: end;
+
+}
+
+.placementLabelFormulaire {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.tailleLabel {
+  width: 30%;
+}
+
+.tailleInput {
+  width: 65%;
+  height: 2.5rem;
+}
+
+.boutonFormulaire {
+  display: block;
+  height: 2rem;
+  width: 25%;
+  font-family: "Trocchi", serif;
+  font-size: 20px;
+  background: #a3795d;
+  margin: 2rem auto;
+}
+
+.boutonFormulaire:hover {
+  background: #e8e2da;
 }
 
 .formCorps {

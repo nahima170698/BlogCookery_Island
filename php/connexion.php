@@ -22,52 +22,56 @@
     
     <main class="formConnexion">
         <!-- formulaire de connexion -->
-        <section>
-            <form>
-                <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <section class="partieConnexion">
+            <h3>Connectez-vous</h3>
+            <form action="">
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="connexionUtilisateur">Utilisateur:</label>
+                    <input class="tailleInput" id="connexionUtilisateur" type="text" placeholder="Utilisateur">
                 </div>
-                <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="connexionMotDePasse">Mot de passe:</label>
+                    <input class="tailleInput" id="connexionMotDePasse" type="text" placeholder="Mot de passe">
                 </div>
-                <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Se connecter</button>
+
+                <input class="boutonFormulaire" type="submit" name="" id="">
+
             </form>
         </section>
-        <section>
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">nom</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        <!-- Partie inscription -->
+
+        <section class="partieConnexion">
+            <h3>Inscrivez-vous</h3>
+            <form action="">
+
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="inscriptionNom">Nom:</label>
+                    <input class="tailleInput" id="inscriptionNom" type="text" placeholder="Nom">
                 </div>
-        
-                <div class="mb-3">
-                    <label for="prenom" class="form-label">prenom</label>
-                    <input type="text" class="form-control" id="prenom">
+
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="inscriptionPrenom">Prenom:</label>
+                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom">
                 </div>
-        
-                <div class="mb-3">
-                    <label for="email" class="form-label">adress mail</label>
-                    <input type="email" class="form-control" id="email">
+
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="inscriptionAdresseMail">Adresse email:</label>
+                    <input class="tailleInput" id="inscriptionAdresseMail" type="text" placeholder="AdresseMail">
+                </div>             
+                
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="inscriptionPseudo">Pseudo:</label>
+                    <input class="tailleInput" id="inscriptionPseudo" type="text" placeholder="Pseudo">
                 </div>
                 
-                <div class="mb-3">
-                    <label for="mdp1" class="form-label">mot de passe</label>
-                    <input type="password" class="form-control" id="mdp1">
+                <div class="placementLabelFormulaire">
+                    <label class="tailleLabel" for="inscriptionMotDePasse">Mot de passe:</label>
+                    <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe">
                 </div>
-        
-        
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
+
+                <input class="boutonFormulaire" type="submit" name="" id="">
+
             </form>
         </section>
     </main>
