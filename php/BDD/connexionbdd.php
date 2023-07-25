@@ -243,6 +243,20 @@ class MaConnexion{
             echo 'Erreur : ' . $e->getMessage();
         }
     }
+
+    public function select($table){
+        try {
+            $requete = "SELECT * from $table";
+            $resultat = $this->connexionPDO->query($requete);
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC);
+            return $resultat;
+        
+        } catch (PDOException $e) {
+            echo "Erreur : ".$e->getMessage();
+        }  
+    }
+
+    
 }
 
 

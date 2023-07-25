@@ -46,14 +46,10 @@
                     </div>
                 </div>
                 <input type="hidden" class="form-control" name="ID_Recette" value="'.$uneDonnees['ID_Recette'].' required">
-                </form>
-                ';
+                </form>';
             }
             ?>
-            
             </div>
-        
-        
         </section>
     
                       <!-- Partie Plats -->
@@ -83,16 +79,10 @@
                     </div>
                 </div>
                 <input type="hidden" class="form-control" name="ID_Recette" value="'.$uneDonnees['ID_Recette'].' required">
-                </form>
-                
-                ';
+                </form>';
             }
             ?>
-            
             </div>
-
-                
-        
         </section>
 
                   <!-- Partie Dessert -->
@@ -122,8 +112,7 @@
                     </div>
                 </div>
                 <input type="hidden" class="form-control" name="ID_Recette" value="'.$uneDonnees['ID_Recette'].' required">
-                </form>
-                ';
+                </form>';
             }
             ?>
         </section>

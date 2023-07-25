@@ -1,13 +1,8 @@
 <?php
 include ("connexionbdd.php");
 
-$test = new MaConnexion("", "", "root", "localhost");
+$modifRecette = new MaConnexion ("cookery_island","","root","localhost");
+$modifRecette->insertionRecette($_POST['nomRecette'],$_POST['categorie'],$_POST['tempsPrepa'], $_POST['difficulte'],$_POST['texte_un'],$_POST['texte_deux'],$_POST['image_un'],$_POST['image_deux'],$_POST['logoCategorie']);
 
-$inserRecette = $test->insertionRecette();
-
-
-
-// header("Location: admin.php");
-
-
+header("Location: ../admin.php");
 ?>
