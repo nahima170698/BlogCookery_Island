@@ -31,7 +31,7 @@
             foreach ($Entrée as $uneDonnees){
             echo '
                 <div class="carte">
-                    <img class="carteImageContainer" src="'.$uneDonnees["Image_Un"].'" alt="">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>
@@ -39,7 +39,7 @@
                     <h3>'.$uneDonnees["Nom_Recette"].'</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="'.$uneDonnees["Categorie_Logo"].'" alt="">
+                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
