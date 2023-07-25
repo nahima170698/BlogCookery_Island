@@ -40,7 +40,7 @@
         </section>
 
         <!-- Partie inscription -->
-
+        
         <section class="partieConnexion">
             <h3>Inscrivez-vous</h3>
             <form action="">
