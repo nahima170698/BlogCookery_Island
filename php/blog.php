@@ -30,6 +30,7 @@
             $Entrée = $test->selectRecette_Categorie("Entrée");
             foreach ($Entrée as $uneDonnees){
             echo '
+            <form action="article.php" method="post">
                 <div class="carte">
                     <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
                     <div class="difficulteTempsRecette">
@@ -41,9 +42,11 @@
                         <div class="iconeContainer">
                             <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
                         </div>
-                        <input class="boutonCarte" type="button" value="Voir article">
+                        <input class="boutonCarte" type="submit" value="Voir article">
                     </div>
                 </div>
+                <input type="hidden" class="form-control" name="ID_Recette" value="'.$uneDonnees['ID_Recette'].' required">
+                </form>
                 ';
             }
             ?>
@@ -64,6 +67,7 @@
             $Plats = $test->selectRecette_Categorie("Plats");
             foreach ($Plats as $uneDonnees){
             echo '
+            <form action="article.php" method="post">
                 <div class="carte">
                     <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
                     <div class="difficulteTempsRecette">
@@ -75,9 +79,12 @@
                         <div class="iconeContainer">
                             <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
                         </div>
-                        <input class="boutonCarte" type="button" value="Voir article">
+                        <input class="boutonCarte" type="submit" value="Voir article">
                     </div>
                 </div>
+                <input type="hidden" class="form-control" name="ID_Recette" value="'.$uneDonnees['ID_Recette'].' required">
+                </form>
+                
                 ';
             }
             ?>
@@ -91,7 +98,7 @@
                   <!-- Partie Dessert -->
         
                   <section class="sectionCarte">
-            <h2><img class="icone" src="../Images/dessert-modified.png" alt=""> Nos desserts</h2>
+            <h2><img class="icone" src="../Images\Icone-dessert.png" alt=""> Nos desserts</h2>
             <div class="carteContainer">
                 
 
@@ -99,6 +106,7 @@
             $Dessert = $test->selectRecette_Categorie("Dessert");
             foreach ($Dessert as $uneDonnees){
             echo '
+            <form action="article.php" method="post">
                 <div class="carte">
                     <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
                     <div class="difficulteTempsRecette">
@@ -110,9 +118,11 @@
                         <div class="iconeContainer">
                             <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
                         </div>
-                        <input class="boutonCarte" type="button" value="Voir article">
+                        <input class="boutonCarte" type="submit" value="Voir article">
                     </div>
                 </div>
+                <input type="hidden" class="form-control" name="ID_Recette" value="'.$uneDonnees['ID_Recette'].' required">
+                </form>
                 ';
             }
             ?>

@@ -447,6 +447,7 @@ nav a img {
     font-family: "Trocchi", serif;
     font-size: 20px;
     background: #a3795d;
+    margin: 1rem auto;
 }
 
 .createCommentaireBouton:hover {

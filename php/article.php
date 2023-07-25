@@ -1,5 +1,10 @@
 <?php include "BDD/connexionbdd.php" ?>
 
+<?php 
+ if(isset($_POST['ID_Recette'])){
+    $Recette = $test->selectArticle_ID($_POST['ID_Recette']);
+}else{ $Recette = $test->selectArticle_ID(1);}?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,28 +14,31 @@
     <link rel="shortcut icon" href="../Images/Logo.Cookery_Island.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Cookery_Island Les mini burgers</title>
+    <title><?php echo 'Cookery_Island '.$Recette[0]["Nom_Recette"].''?></title>
 </head>
 
 <body>
-
+    
     <header>
         <?php include "../module/moduleNavBar.php"  ?>
+    
+    <?php
+    echo '
         <div class="header">
-            <h1>Les mini burgers</h1>
+            <h1>'.$Recette[0]["Nom_Recette"].'</h1>
         </div>
     </header>
-
+    
     <main>
-
+        
         <!-- Partie premiere image -->
-
+        
         <section class="articleImageRecetteContainer" id="image1">
-            <img class="articleImageRecette" src="../Images\miniBurger.jpg" alt="Les minis burger">
+            <img class="articleImageRecette" src="../'.$Recette[0]["Image_Un"].'" alt="Les minis burger">
         </section>
-
+        
         <!-- Partie ingredients -->
-
+        
         <section class="articleIngredientContainer" id="ingredient">
             <ul class="placementIngredient">
                 <li>
@@ -66,26 +74,21 @@
         <!-- Partie premier champ de texte -->
 
         <section class="articleTextContainer" id="text1">
-            <p>Recette du mini burger
-                Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut
-                Presentation du blog rapide</p>
+            <p>'.$Recette[0]["Texte_Un"].'</p>
         </section>
 
         <!-- Partie deuxieme image -->
 
         <section class="articleImageRecetteContainer" id="image2">
-            <img class="articleImageRecette" src="../Images\miniBurger2.jpg" alt="Les minis burger">
+            <img class="articleImageRecette" src="../'.$Recette[0]["Image_Deux"].'" alt="Les minis burger">
         </section>
-
+        
         <!-- Partie deuxieme champ de texte -->
 
         <section class="articleTextContainer" id="text2">
-            <p>Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut
-                Presentation du blog rapide
-
-                Cupcake ipsum dolor sit amet cake bear claw oat cake caramels. Apple pie sweet sweet ice cream tart tootsie roll. Dragée gummi bears pastry shortbread ice cream caramels biscuit apple pie ice cream. Chocolate cake pudding cake muffin tart sugar plum pudding soufflé. Biscuit cupcake macaroon candy bear claw donut</p>
-        </section>
-
+            <p>'.$Recette[0]["Texte_Deux"].'</p>
+        </section>';
+        ?>
         <section class="commentaire" id="commentaire">
             <h2>Commentaire</h2>
             <div class="commentaireUnique">
