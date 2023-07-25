@@ -251,6 +251,8 @@ $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
 //$inser = $test->maj_Recette("carry zebdezre","plaefzt","133 min","Facile","text random oué","texte random encore", "img","img2","gjjj",2);
 
+//$supp = $test->selectArticle_ID(2);
+//var_dump($supp);
 //$supp = $test->insertionIngredient('ingredient');
 //var_dump($supp);
 //$inserting = $test->maj_Ingredient("ingréeza","ezngré","ingezré","ingzaré","ingezaé","ingezaé","inezagré","ingrezaé","inggré","ingrfré","ingré","ingré","ingré","ingré","ingré",1);

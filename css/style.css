@@ -474,8 +474,6 @@ nav a img {
   background: #e8e2da;
   padding: 1rem 2%;
   box-shadow: 5px 5px 10px 1px #000;
-  text-align: end;
-
 }
 
 .placementLabelFormulaire {
@@ -486,6 +484,9 @@ nav a img {
 
 .tailleLabel {
   width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .tailleInput {
