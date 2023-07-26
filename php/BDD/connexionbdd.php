@@ -136,18 +136,19 @@ class MaConnexion{
 
 
 
-    public function insertionUtilisateur($nom,$prenom,$pseudo,$mdp,$id){
+    public function insertionUtilisateur($nom,$prenom,$pseudo,$mail,$mdp,$id){
         try {
-            $requete = " INSERT INTO utilisateur(Nom, Prenom,Pseudo,Mot_De_Passe,ID_Role)
-                VALUES (:Nom, :Prenom, :Pseudo, :Mot_De_Passe,:ID_Role)";
+            $requete = " INSERT INTO utilisateur(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
+                VALUES (:Nom, :Prenom, :Pseudo,:Adresse_Mail, :Mot_De_Passe,:ID_Role)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
             $requete_preparee->bindParam(':Nom',$nom,PDO::PARAM_STR,30);
             $requete_preparee->bindParam(':Prenom',$prenom,PDO::PARAM_STR,50);
             $requete_preparee->bindParam(':Pseudo',$pseudo,PDO::PARAM_STR);
+            $requete_preparee->bindParam(':Adresse_Mail',$mail,PDO::PARAM_STR);
             $requete_preparee->bindParam(':Mot_De_Passe',$mdp,PDO::PARAM_STR);
             $requete_preparee->bindParam(':ID_Role',$id,PDO::PARAM_INT);
-
+            
             $requete_preparee->execute();
             echo ("insertion reussi");
             return "insertion reussi";
@@ -255,6 +256,8 @@ class MaConnexion{
             echo "Erreur : ".$e->getMessage();
         }  
     }
+
+    
 
     
 }

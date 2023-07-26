@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,11 +30,11 @@
             <form action="">
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="connexionUtilisateur">Utilisateur:</label>
-                    <input class="tailleInput" id="connexionUtilisateur" type="text" placeholder="Utilisateur">
+                    <input class="tailleInput" id="connexionUtilisateur" type="text" name= "identifiant" placeholder="Utilisateur">
                 </div>
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="connexionMotDePasse">Mot de passe:</label>
-                    <input class="tailleInput" id="connexionMotDePasse" type="text" placeholder="Mot de passe">
+                    <input class="tailleInput" id="connexionMotDePasse" type="text" name="mdp" placeholder="Mot de passe">
                 </div>
 
                 <input class="boutonFormulaire" type="submit" name="" id="">
@@ -47,27 +50,27 @@
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionNom">Nom:</label>
-                    <input class="tailleInput" id="inscriptionNom" type="text" placeholder="Nom" name="Nom">
+                    <input class="tailleInput" id="inscriptionNom" type="text" placeholder="Nom">
                 </div>
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionPrenom">Prenom:</label>
-                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom" name="Prenom">
+                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom">
                 </div>
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionAdresseMail">Adresse email:</label>
-                    <input class="tailleInput" id="inscriptionAdresseMail" type="text" placeholder="AdresseMail" name="AdresseEmail">
+                    <input class="tailleInput" id="inscriptionAdresseMail" type="text" placeholder="AdresseMail">
                 </div>             
                 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionPseudo">Pseudo:</label>
-                    <input class="tailleInput" id="inscriptionPseudo" type="text" placeholder="Pseudo" name="Pseudo">
+                    <input class="tailleInput" id="inscriptionPseudo" type="text" placeholder="Pseudo">
                 </div>
                 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionMotDePasse">Mot de passe:</label>
-                    <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe" name="Mot_De_Passe">
+                    <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe">
                 </div>
 
                 <input type="hidden" name="ID_Role" value="2">

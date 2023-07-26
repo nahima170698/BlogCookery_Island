@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <?php include "BDD/connexionbdd.php" ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +27,7 @@
             <!-- formulaire de recette-->
             <section class="partieConnexion">
                 <h3>Recette</h3>
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="adminCategorie">Catégorie:</label>
                     <select class="tailleInput" id="adminCategorie" name="categorie" required>
@@ -33,7 +36,7 @@
                         <option value="Dessert">Dessert</option>
                     </select>
                 </div>
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="adminLogoCategorie">Logo catégorie:</label>
                     <select class="tailleInput" id="adminLogoCategorie" name="logoCategorie" required>
@@ -48,7 +51,7 @@
                     <input class="tailleInput" id="adminNomRecette" type="text" placeholder="Nom de la recette" name="nomRecette" required>
                 </div>
 
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="adminTempsPreparation">Temps de préparation:</label>
                     <input class="tailleInput" id="adminTempsPreparation" type="text" placeholder="Temps de préparation" name="tempsPrepa" required>
@@ -57,15 +60,15 @@
                 <div class="placementLabelFormulaire">
                     <p>Difficulté:</p>
                     <div>
-                        <input type="radio" id="Facile" name="difficulte" />
+                        <input type="radio" id="Facile" name="difficulte" value="Facile" />
                         <label for="Facile">Facile</label>
                     </div>
                     <div>
-                        <input type="radio" id="Moyens" name="difficulte" checked />
+                        <input type="radio" id="Moyens" name="difficulte" value="Moyens" checked />
                         <label for="Moyens">Moyens</label>
                     </div>
                     <div>
-                        <input type="radio" id="Difficile" name="difficulte" />
+                        <input type="radio" id="Difficile" value="Difficile" name="difficulte" />
                         <label for="Difficile">Difficile</label>
                     </div>
                 </div>
