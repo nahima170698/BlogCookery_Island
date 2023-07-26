@@ -267,8 +267,6 @@ class MaConnexion{
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
 
-$inser = $test->insertionUtilisateur("ba","ba","baba","bak@fe.fd","dsdsd",2);
-
 //$supp = $test->selectArticle_ID(2);
 //var_dump($supp);
 //$supp = $test->insertionIngredient('ingredient');
