@@ -146,8 +146,8 @@ class MaConnexion{
             $requete_preparee->bindParam(':Prenom',$prenom,PDO::PARAM_STR,50);
             $requete_preparee->bindParam(':Pseudo',$pseudo,PDO::PARAM_STR);
             $requete_preparee->bindParam(':Mot_De_Passe',$mdp,PDO::PARAM_STR);
-            $requete_preparee->bindParam(':ID_Role',$id,PDO::PARAM_STR);
-
+            $requete_preparee->bindParam(':ID_Role',$id,PDO::PARAM_INT);
+            
             $requete_preparee->execute();
             echo ("insertion reussi");
             return "insertion reussi";

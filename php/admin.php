@@ -24,7 +24,7 @@
             <!-- formulaire de recette-->
             <section class="partieConnexion">
                 <h3>Recette</h3>
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="adminCategorie">Catégorie:</label>
                     <select class="tailleInput" id="adminCategorie" name="categorie" required>
@@ -33,7 +33,7 @@
                         <option value="Dessert">Dessert</option>
                     </select>
                 </div>
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="adminLogoCategorie">Logo catégorie:</label>
                     <select class="tailleInput" id="adminLogoCategorie" name="logoCategorie" required>
@@ -48,7 +48,7 @@
                     <input class="tailleInput" id="adminNomRecette" type="text" placeholder="Nom de la recette" name="nomRecette" required>
                 </div>
 
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="adminTempsPreparation">Temps de préparation:</label>
                     <input class="tailleInput" id="adminTempsPreparation" type="text" placeholder="Temps de préparation" name="tempsPrepa" required>
