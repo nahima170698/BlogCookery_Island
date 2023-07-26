@@ -138,7 +138,7 @@ class MaConnexion{
 
     public function insertionUtilisateur($nom,$prenom,$pseudo,$mail,$mdp,$id){
         try {
-            $requete = " INSERT INTO utilisateur(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
+            $requete = " INSERT INTO `utilisateur`(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
                 VALUES (:Nom, :Prenom, :Pseudo,:Adresse_Mail, :Mot_De_Passe,:ID_Role)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
@@ -265,6 +265,7 @@ class MaConnexion{
 
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
+
 
 //$inser = $test->maj_Recette("carry zebdezre","plaefzt","133 min","Facile","text random oué","texte random encore", "img","img2","gjjj",2);
 

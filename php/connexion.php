@@ -72,9 +72,9 @@ session_start();
                     <label class="tailleLabel" for="inscriptionMotDePasse">Mot de passe:</label>
                     <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe">
                 </div>
-
+                
                 <input type="hidden" name="ID_Role" value="2">
-
+                
                 <input class="boutonFormulaire" type="submit" id="">
 
             </form>
