@@ -43,34 +43,36 @@
         
         <section class="partieConnexion">
             <h3>Inscrivez-vous</h3>
-            <form action="">
+            <form action="BDD/insertionusers.php" method="POST">
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionNom">Nom:</label>
-                    <input class="tailleInput" id="inscriptionNom" type="text" placeholder="Nom">
+                    <input class="tailleInput" id="inscriptionNom" type="text" placeholder="Nom" name="Nom">
                 </div>
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionPrenom">Prenom:</label>
-                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom">
+                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom" name="Prenom">
                 </div>
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionAdresseMail">Adresse email:</label>
-                    <input class="tailleInput" id="inscriptionAdresseMail" type="text" placeholder="AdresseMail">
+                    <input class="tailleInput" id="inscriptionAdresseMail" type="text" placeholder="AdresseMail" name="AdresseEmail">
                 </div>             
                 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionPseudo">Pseudo:</label>
-                    <input class="tailleInput" id="inscriptionPseudo" type="text" placeholder="Pseudo">
+                    <input class="tailleInput" id="inscriptionPseudo" type="text" placeholder="Pseudo" name="Pseudo">
                 </div>
                 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionMotDePasse">Mot de passe:</label>
-                    <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe">
+                    <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe" name="Mot_De_Passe">
                 </div>
 
-                <input class="boutonFormulaire" type="submit" name="" id="">
+                <input type="hidden" name="ID_Role" value="2">
+
+                <input class="boutonFormulaire" type="submit" id="">
 
             </form>
         </section>
