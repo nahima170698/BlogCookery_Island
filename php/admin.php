@@ -57,15 +57,15 @@
                 <div class="placementLabelFormulaire">
                     <p>Difficulté:</p>
                     <div>
-                        <input type="radio" id="Facile" name="difficulte" />
+                        <input type="radio" id="Facile" name="difficulte" value="Facile" />
                         <label for="Facile">Facile</label>
                     </div>
                     <div>
-                        <input type="radio" id="Moyens" name="difficulte" checked />
+                        <input type="radio" id="Moyens" name="difficulte" value="Moyens" checked />
                         <label for="Moyens">Moyens</label>
                     </div>
                     <div>
-                        <input type="radio" id="Difficile" name="difficulte" />
+                        <input type="radio" id="Difficile" value="Difficile" name="difficulte" />
                         <label for="Difficile">Difficile</label>
                     </div>
                 </div>
