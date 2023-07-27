@@ -27,7 +27,7 @@ session_start();
         <!-- formulaire de connexion -->
         <section class="partieConnexion">
             <h3>Connectez-vous</h3>
-            <form action="">
+            <form action="BDD/select.php" method="POST">
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="connexionUtilisateur">Utilisateur:</label>
                     <input class="tailleInput" id="connexionUtilisateur" type="text" name= "identifiant" placeholder="Utilisateur">

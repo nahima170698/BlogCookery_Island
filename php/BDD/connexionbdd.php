@@ -27,7 +27,7 @@ class MaConnexion{
     //fonction pour selectionner des elements dans la bdd
     public function selectUtilisateur($identifiant, $mdp){
         try {
-            $requete = "SELECT * from utilisateur where identifiant = :identifiant and mot_de_passe = :mdp";
+            $requete = "SELECT * from utilisateur where Pseudo = :identifiant and Mot_De_Passe = :mdp";
 
             $requete_preparee = $this->connexionPDO->prepare($requete);
             $requete_preparee->bindParam(":identifiant", $identifiant,PDO::PARAM_STR);
@@ -138,7 +138,7 @@ class MaConnexion{
 
     public function insertionUtilisateur($nom,$prenom,$pseudo,$mail,$mdp,$id){
         try {
-            $requete = " INSERT INTO `utilisateur`(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
+            $requete = " INSERT INTO utilisateur(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
                 VALUES (:Nom, :Prenom, :Pseudo,:Adresse_Mail, :Mot_De_Passe,:ID_Role)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
@@ -266,6 +266,7 @@ class MaConnexion{
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
+// $inser = $test->insertionUtilisateur("ba","ba","baba","bak@fe.fd","dsdsd",2);
 
 //$supp = $test->selectArticle_ID(2);
 //var_dump($supp);
