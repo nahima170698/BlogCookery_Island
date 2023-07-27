@@ -36,7 +36,7 @@ var_dump($_SESSION);
             echo '
             <form action="article.php" method="post">
                 <div class="carte">
-                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$Recette[0]["Nom_Recette"].'">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$uneDonnees["Nom_Recette"].'">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>
@@ -69,7 +69,7 @@ var_dump($_SESSION);
             echo '
             <form action="article.php" method="post">
                 <div class="carte">
-                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$Recette[0]["Nom_Recette"].'">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$uneDonnees["Nom_Recette"].'">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>
@@ -102,7 +102,7 @@ var_dump($_SESSION);
             echo '
             <form action="article.php" method="post">
                 <div class="carte">
-                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$Recette[0]["Nom_Recette"].'">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$uneDonnees["Nom_Recette"].'">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>

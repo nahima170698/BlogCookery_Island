@@ -7,7 +7,12 @@ var_dump($_SESSION);
 <?php 
  if(isset($_POST['ID_Recette'])){
     $Recette = $test->select_ingredient_Recette($_POST['ID_Recette']);
-}else{ $Recette = $test->select_ingredient_Recette(1);}?>
+}else{ $Recette = $test->select_ingredient_Recette(1);}
+
+if(empty($Recette)){
+    $Recette = $test->selectArticle_ID($_POST['ID_Recette']);
+}else{ $Recette = $test->select_ingredient_Recette(1);}
+?>
 
 
 <!DOCTYPE html>
@@ -46,11 +51,15 @@ var_dump($_SESSION);
         
         <section class="articleIngredientContainer" id="ingredient">
             <ul class="placementIngredient">';
-            foreach ($Recette as $uneDonnees){
-        echo    '<li>
-                    <p>'.$uneDonnees["quantite"].' '.$uneDonnees["Nom_Ingredient"].'</P>
-                </li>';
-            }
+            if(isset($Recette[0]["Nom_Ingredient"])){
+                foreach ($Recette as $uneDonnees){
+                
+                    echo    '<li>
+                                <p>'.$uneDonnees["quantite"].' '.$uneDonnees["Nom_Ingredient"].'</P>
+                            </li>';
+                        };
+            }else{ echo '<h3> Pas d ingredient disponible<h3>';}
+
         echo '</ul>
         </section>
 

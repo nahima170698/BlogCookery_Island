@@ -39,6 +39,7 @@ if (!empty($select)) {
 }
 var_dump($_SESSION);
 
+header("Location: ../../index.php");
 ?>
 
 

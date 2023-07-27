@@ -527,9 +527,9 @@ form div {
 
 /*GESTION ARTICLE*/
 .tableWarper {
-  background: #f9f9f9;
-  padding: 3rem 20px;
-  max-width: fit-content;
+  background: white;
+  margin: auto;
+  max-width: 95%;
   max-height: fit-content;
  
  }
@@ -589,6 +589,14 @@ table th{
 
 .partieAdmin table button {
   margin: 2rem auto;
+}
+
+.partieCreate {
+  background: rgba(106, 255, 47, 0.632)!important;
+}
+
+.partieDelete {
+  background: rgba(255, 0, 0, 0.622);
 }
 
 /* Partie footer */

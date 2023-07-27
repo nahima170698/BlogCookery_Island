@@ -3,7 +3,7 @@
             <a class="lienNav" href="blog.php">Nos recettes</a>
             <a class="lienNav" href="admin.php">Cours de cuisine</a>
             <a class="lienNav" href="connexion.php">Connexion</a>
-            <div class="dropdown">
+
                 
             <?php
 
@@ -20,7 +20,8 @@ switch (true) {
                 <p>' .  $_SESSION["Nom"] .'</p>
                 <p>' . $_SESSION["Prenom"] .'</p>
                 <p>'. $_SESSION["Role"] .'</p>
-                <a class="lienNav" href="admin.php">Cours de cuisine</a>
+                <a class="lienNav" href="admin.php">Page admin</a>
+                <a href="">Lien vers le kill</a>
             </div>
         </div>';
         break;
@@ -32,13 +33,13 @@ switch (true) {
                 <p>' . $_SESSION["idUser"] .'</p>
                 <p>' .  $_SESSION["Nom"] .'</p>
                 <p>' . $_SESSION["Prenom"] .'</p>
-                <a>Lien vers le kill</a>
+                <a href="">Lien vers le kill</a>
             </div>
         </div>';
         break;
-
+    
     default:
-        // Cas par défaut lorsque $_SESSION["Role"] ne correspond à aucun cas précédent.
+        
         break;
 }
 ?>

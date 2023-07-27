@@ -234,6 +234,21 @@ class MaConnexion{
             echo 'Erreur : ' . $e->getMessage();
         }
     }
+
+    public function deleteIngredient($ID_Ingredient){
+        try{
+            $requete = "DELETE FROM ingredient WHERE ID_Ingredient = ?";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+            
+            $requete_preparee->bindParam(1, $ID_Ingredient, PDO::PARAM_INT);
+            $requete_preparee->execute();
+            echo 'suppression reussie';
+            return $requete_preparee;
+
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+        }
+    }
     
     public function select($table){
         try {
