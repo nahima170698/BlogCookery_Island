@@ -5,8 +5,9 @@ session_start();
 
 <?php 
  if(isset($_POST['ID_Recette'])){
-    $Recette = $test->selectArticle_ID($_POST['ID_Recette']);
-}else{ $Recette = $test->selectArticle_ID(1);}?>
+    $Recette = $test->select_ingredient_Recette($_POST['ID_Recette']);
+}else{ $Recette = $test->select_ingredient_Recette(1);}?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,35 +44,13 @@ session_start();
         <!-- Partie ingredients -->
         
         <section class="articleIngredientContainer" id="ingredient">
-            <ul class="placementIngredient">
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-                <li>
-                    <p>Une quantité d un ingredient</P>
-                </li>
-            </ul>
+            <ul class="placementIngredient">';
+            foreach ($Recette as $uneDonnees){
+        echo    '<li>
+                    <p>'.$uneDonnees["quantité"].' '.$uneDonnees["Nom_Ingredient"].'</P>
+                </li>';
+            }
+        echo '</ul>
         </section>
 
         <!-- Partie premier champ de texte -->
