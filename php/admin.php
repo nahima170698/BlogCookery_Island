@@ -225,7 +225,7 @@ session_start();
                     </div>
                     <div class="placementLabelFormulaire">
                         <label class="tailleLabel" for="quantité">Quantité:</label>
-                        <input class="tailleInput" id="quantité" type="text" placeholder="Quantité de cette ingredient" name="quantité" required>
+                        <input class="tailleInput" id="quantité" type="text" placeholder="Quantité de cette ingredient" name="quantite" required>
                     </div>
                     <input class="boutonFormulaire" type="submit">
                 </form>

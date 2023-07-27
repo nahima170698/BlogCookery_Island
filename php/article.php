@@ -47,7 +47,7 @@ session_start();
             <ul class="placementIngredient">';
             foreach ($Recette as $uneDonnees){
         echo    '<li>
-                    <p>'.$uneDonnees["quantité"].' '.$uneDonnees["Nom_Ingredient"].'</P>
+                    <p>'.$uneDonnees["quantite"].' '.$uneDonnees["Nom_Ingredient"].'</P>
                 </li>';
             }
         echo '</ul>

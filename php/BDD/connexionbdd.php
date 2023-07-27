@@ -132,14 +132,15 @@ class MaConnexion{
         }
     }
 
-    public function insertionIngredientRecette($ID_Recette, $ID_Ingredient, $quantité){
+    public function insertionIngredientRecette($ID_Recette, $ID_Ingredient, $quantite){
         try {
-            $requete = " INSERT INTO `ingredient_recette`(ID_Recette, ID_Ingredient, quantité)
-            VALUES (:ID_Recette, :ID_Ingredient, :quantité)";
+            $requete = " INSERT INTO `ingredient_recette`(ID_Recette, ID_Ingredient, quantite)
+            VALUES (:ID_Recette, :ID_Ingredient, :quantite)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
+
             $requete_preparee->bindParam(':ID_Recette', $ID_Recette, PDO::PARAM_INT);
             $requete_preparee->bindParam(':ID_Ingredient', $ID_Ingredient, PDO::PARAM_INT);
-            $requete_preparee->bindParam(':quantité', $quantité, PDO::PARAM_STR);
+            $requete_preparee->bindParam(':quantite', $quantite, PDO::PARAM_STR);
             
             $requete_preparee->execute();
             echo ("insertion reussi");
@@ -239,11 +240,6 @@ class MaConnexion{
 
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
-
-$message = $test->insertionIngredientRecette(1,3,"2kg de");
-
-echo $message;
-
 
 //$supp = $test->selectArticle_ID(2);
 //var_dump($supp);
