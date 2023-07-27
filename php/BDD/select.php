@@ -22,10 +22,7 @@ if (!empty($select)) {
         $_SESSION["Nom"]=$select[0]["Nom"] and
         $_SESSION["Prenom"]=$select[0]["Prenom"] and
         $_SESSION["Role"]=$select[0]["ID_Role"];
-
         
-
-
         echo "its ok";
     } else{
         echo " nop en fait";

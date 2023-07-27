@@ -90,7 +90,7 @@ class MaConnexion{
             return "Erreur : " . $error->getMessage();
         }
     }
-
+    
     // Fonction d'insertion des recettes (fonctionne)
     public function insertionRecette($nomRecette,$categorie,$tempsPrepa,$difficulte,$texte_un,$texte_deux,$image_un,$image_deux,$logoCategorie){
         try {

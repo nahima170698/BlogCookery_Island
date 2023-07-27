@@ -5,20 +5,48 @@
             <a class="lienNav" href="connexion.php">Connexion</a>
             <div class="dropdown">
                 
-                    <?php
-                    echo
-                    '<button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
-                        <div class="dropdown-content">
-                        <a href="#">' . $_SESSION["idUser"] .'</a>
-                        <a href="#">' .  $_SESSION["Nom"] .'</a>
-                        <a href="#">' . $_SESSION["Prenom"] .'</a>
-                        <a href="#">'. $_SESSION["Role"] .'</a>
-                        </div>'
-                    ?>
+            <?php
+
+switch (true) {
+    case empty($_SESSION["Role"]):
+        echo '<h3>Non connecté</h3>';
+        break;
+    case ($_SESSION["Role"] == 1):
+        echo '
+        <div class="dropdown">
+            <button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
+            <div class="dropdown-content">
+                <p>' . $_SESSION["idUser"] .'</p>
+                <p>' .  $_SESSION["Nom"] .'</p>
+                <p>' . $_SESSION["Prenom"] .'</p>
+                <p>'. $_SESSION["Role"] .'</p>
+                <a class="lienNav" href="admin.php">Cours de cuisine</a>
+            </div>
+        </div>';
+        break;
+    case ($_SESSION["Role"] == 2):
+        echo '
+        <div class="dropdown">
+            <button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
+            <div class="dropdown-content">
+                <p>' . $_SESSION["idUser"] .'</p>
+                <p>' .  $_SESSION["Nom"] .'</p>
+                <p>' . $_SESSION["Prenom"] .'</p>
+                <a>Lien vers le kill</a>
+            </div>
+        </div>';
+        break;
+
+    default:
+        // Cas par défaut lorsque $_SESSION["Role"] ne correspond à aucun cas précédent.
+        break;
+}
+?>
+
                 <!-- <div class="dropdown-content">
-                    <a href="#">Nos recettes</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a p>Nos recettes</a>
+                    <a p>Link 2</a>
+                    <a p>Link 3</a>
                 </div> -->
             </div>
             <div class="burger dropdown">

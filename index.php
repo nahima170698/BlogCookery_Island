@@ -10,8 +10,8 @@ var_dump($_SESSION);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookery_Island Acceuil</title>
     <link rel="shortcut icon" href="Images/Logo.Cookery_Island.png" />
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@ var_dump($_SESSION);
         </div>
     </header>
     <main>
-
+        
         <!-- Premiere section 
         Partie presentation -->
 
@@ -74,7 +74,7 @@ var_dump($_SESSION);
             <div class="carteContainer">
                 
                 <div class="carte">
-                    <img class="carteImageContainer" src="Images/Breakfast.jpg" alt="">
+                    <img class="carteImageContainer" src="Images/Breakfast.jpg" alt="Breakfast">
                     <div class="difficulteTempsRecette">
                         <p>Facile</p>
                         <p>30 min</p>
@@ -82,15 +82,14 @@ var_dump($_SESSION);
                     <h3>Breakfast</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="Images/istockphoto-1183041351-612x612-modified.png" alt="">
-                            <p>Recette francaise</p>
+                            <img class="icone" src="Images\icone_entrée1.png" alt="Icone entrée">
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
                 
                 <div class="carte">
-                    <img class="carteImageContainer" src="Images/Pizza.jpg" alt="">
+                    <img class="carteImageContainer" src="Images/Pizza.jpg" alt="Pizza">
                     <div class="difficulteTempsRecette">
                         <p>Moyen</p>
                         <p>120 min</p>
@@ -98,16 +97,14 @@ var_dump($_SESSION);
                     <h3>Pizza</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="Images/iconePlat (2)-modified.png" alt="">
-                            <p>recette réunionnaise</p>
-                        
+                            <img class="icone" src="Images/iconePlat (2)-modified.png" alt="Plat">                        
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
                 
                 <div class="carte">
-                    <img class="carteImageContainer" src="Images/MilleFeulle.jpg" alt="">
+                    <img class="carteImageContainer" src="Images/MilleFeulle.jpg" alt="Mille feuille">
                     <div class="difficulteTempsRecette">
                         <p>Difficile</p>
                         <p>210 min</p>
@@ -115,8 +112,7 @@ var_dump($_SESSION);
                     <h3>Mille Feulle</h3>
                     <div class="difficulteTempsRecette">
                         <div>
-                            <img class="icone" src="Images/dessert-modified.png" alt="">
-                            <p>recette indienne</p>
+                            <img class="icone" src="Images\Icone-dessert.png" alt="Icone dessert">
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>

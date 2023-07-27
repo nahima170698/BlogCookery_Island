@@ -39,7 +39,7 @@ var_dump($_SESSION);
         <!-- Partie premiere image -->
         
         <section class="articleImageRecetteContainer" id="image1">
-            <img class="articleImageRecette" src="../'.$Recette[0]["Image_Un"].'" alt="Les minis burger">
+            <img class="articleImageRecette" src="../'.$Recette[0]["Image_Un"].'" alt="'.$Recette[0]["Nom_Recette"].'">
         </section>
         
         <!-- Partie ingredients -->
@@ -63,7 +63,7 @@ var_dump($_SESSION);
         <!-- Partie deuxieme image -->
 
         <section class="articleImageRecetteContainer" id="image2">
-            <img class="articleImageRecette" src="../'.$Recette[0]["Image_Deux"].'" alt="Les minis burger">
+            <img class="articleImageRecette" src="../'.$Recette[0]["Image_Deux"].'" alt="'.$Recette[0]["Nom_Recette"].'">
         </section>
         
         <!-- Partie deuxieme champ de texte -->
