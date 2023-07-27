@@ -156,12 +156,12 @@ session_start();
             </div>
         </div>
 
-        <!-- Modal Fonction Delete-->
+        <!-- Modal Fonction Delete Recette-->
         <?php
         foreach ($recettes as $uneDonnees) {
             echo
             '<form method="POST" action="BDD/deleteRecette.php">
-        <div class="modal fade" id="fonctionDelete'.$uneDonnees['ID_Recette'].'" tabindex="-1" aria-labelledby="exampleModalLabel' . $uneDonnees['ID_Recette'] . '" aria-hidden="true">
+        <div class="modal fade" id="fonctionDelete' . $uneDonnees['ID_Recette'] . '" tabindex="-1" aria-labelledby="exampleModalLabel' . $uneDonnees['ID_Recette'] . '" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -181,12 +181,13 @@ session_start();
         <input type="hidden" name="ID_Recette" value="' . $uneDonnees['ID_Recette'] . '">
     </form>';
         }
-        ?>
 
+        ?>
+        
         <h3>Gestion des ingredients</h3>
 
         <section class="formConnexion">
-
+            
             <div class="partieConnexion">
                 <h3>Ajout d'ingredient a la liste</h3>
                 <form action="BDD/insertionIngredient.php" method="POST">
@@ -206,8 +207,8 @@ session_start();
                         <label class="tailleLabel" for="choixRecette">Ajout dans cette recette:</label>
                         <select class="tailleInput" id="choixRecette" name="ID_Recette" required>
                             <?php
-                            foreach ($recettes as $uneDonnees){
-                            echo '<option value="'.$uneDonnees['ID_Recette'].'">'.$uneDonnees['Nom_Recette'].'</option>';
+                            foreach ($recettes as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Recette'] . '">' . $uneDonnees['Nom_Recette'] . '</option>';
                             }
                             ?>
                         </select>
@@ -215,10 +216,10 @@ session_start();
                     <div class="placementLabelFormulaire">
                         <label class="tailleLabel" for="choixIngredient">Ingredient a ajouter:</label>
                         <select class="tailleInput" id="choixIngredient" name="ID_Ingredient" required>
-                        <?php
+                            <?php
                             $ingredients = $test->select("ingredient");
-                            foreach ($ingredients as $uneDonnees){
-                            echo '<option value="'.$uneDonnees['ID_Ingredient'].'">'.$uneDonnees['Nom_Ingredient'].'</option>';
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
                             }
                             ?>
                         </select>
@@ -230,13 +231,88 @@ session_start();
                     <input class="boutonFormulaire" type="submit">
                 </form>
             
-
+            </div>
+            
+            <div class="partieConnexion">
+                <h3>Suppression d'ingredient aux recettes</h3>
+                <form action="BDD/liaisonIngredientRecette.php" method="POST">
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="choixRecette">Ajout dans cette recette:</label>
+                        <select class="tailleInput" id="choixRecette" name="ID_Recette" required>
+                            <?php
+                            foreach ($recettes as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Recette'] . '">' . $uneDonnees['Nom_Recette'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="choixIngredient">Ingredient a ajouter:</label>
+                        <select class="tailleInput" id="choixIngredient" name="ID_Ingredient" required>
+                            <?php
+                            $ingredients = $test->select("ingredient");
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="quantité">Quantité:</label>
+                        <input class="tailleInput" id="quantité" type="text" placeholder="Quantité de cette ingredient" name="quantite" required>
+                    </div>
+                    <input class="boutonFormulaire" type="submit">
+                </form>
             
             </div>
 
         </section>
-    </main>
 
+        <section class="formConnexion">
+        <div class="partieConnexion">
+                <h3>Ajout d'ingredient a la liste</h3>
+                <form action="BDD/suppressionIngredient.php" method="POST">
+                <label class="tailleLabel" for="suppIngredient">Ingredient a supprimer:</label>
+                        <select class="tailleInput" id="suppIngredient" name="ID_Ingredient" required>
+                            <?php
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    <input class="boutonFormulaire" type="submit">
+                </form>
+            </div>
+        <div class="partieConnexion">
+                <h3>Suppression d'ingredient aux recettes</h3>
+                <form action="BDD/suppressionIngredientRecette.php" method="POST">
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="choixRecette2">Supprimer dans cette recette:</label>
+                        <select class="tailleInput" id="choixRecette2" name="ID_Recette" required>
+                            <?php
+                            foreach ($recettes as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Recette'] . '">' . $uneDonnees['Nom_Recette'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="choixIngredient">Ingredient a ajouter:</label>
+                        <select class="tailleInput" id="choixIngredient" name="ID_Ingredient" required>
+                            <?php
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <input class="boutonFormulaire" type="submit">
+                </form>
+            
+            </div>
+        </section>
+    
+    
 
     <!-- <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="ingredient_1">Premier ingrédient:</label>

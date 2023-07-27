@@ -62,7 +62,7 @@ var_dump($_SESSION);
             <h2><img class="icone" src="../Images/iconePlat (2)-modified.png" alt=""> Nos plats</h2>
             <div class="carteContainer">
                 
-
+            
             <?php
             $Plats = $test->selectRecette_Categorie("Plats");
             foreach ($Plats as $uneDonnees){
@@ -88,14 +88,14 @@ var_dump($_SESSION);
             ?>
             </div>
         </section>
-
+                  
                   <!-- Partie Dessert -->
         
                   <section class="sectionCarte">
             <h2><img class="icone" src="../Images\Icone-dessert.png" alt=""> Nos desserts</h2>
             <div class="carteContainer">
                 
-
+            
             <?php
             $Dessert = $test->selectRecette_Categorie("Dessert");
             foreach ($Dessert as $uneDonnees){
