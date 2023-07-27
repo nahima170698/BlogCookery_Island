@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_SESSION);
 ?>
 <?php include "BDD/connexionbdd.php" ?>
 
