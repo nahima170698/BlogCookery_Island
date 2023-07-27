@@ -240,9 +240,9 @@ class MaConnexion{
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
-$message = $test->insertionIngredientRecette(1,3,"2kg de");
+// $message = $test->insertionIngredientRecette(1,3,"2kg de");
 
-echo $message;
+// echo $message;
 
 
 //$supp = $test->selectArticle_ID(2);
