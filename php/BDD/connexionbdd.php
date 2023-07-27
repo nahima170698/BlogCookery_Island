@@ -71,15 +71,14 @@ class MaConnexion{
     }
 
     // Fonction selection des ingredient par rapport a la recette (fonctionne)
-    public function select_ingredient_Recette($idRecette)
-    {
-
+    public function select_ingredient_Recette($idRecette){
+        
         try {
             $requete = "SELECT * FROM `ingredient_recette` 
                 INNER JOIN recette ON recette.ID_Recette = ingredient_recette.ID_Recette 
                 INNER JOIN ingredient ON ingredient.ID_Ingredient = ingredient_recette.ID_Ingredient 
                 where recette.ID_Recette = ?";
-
+            
             $requete_preparee = $this->connexionPDO->prepare($requete);
 
             $requete_preparee->bindValue(1, $idRecette, PDO::PARAM_STR);
@@ -123,8 +122,8 @@ class MaConnexion{
             $requete = " INSERT INTO ingredient(Nom_Ingredient)
             VALUES (:Nom_Ingredient)";
             $requete_preparee = $this->connexionPDO->prepare($requete);
-            $requete_preparee->bindParam(':Nom_Ingredient', $ingredient, PDO::PARAM_STR, 30);
-
+            $requete_preparee->bindParam(':Nom_Ingredient', $ingredient, PDO::PARAM_STR);
+            
             $requete_preparee->execute();
             echo ("insertion reussi");
             return "insertion reussi";
@@ -133,9 +132,23 @@ class MaConnexion{
         }
     }
 
-
-
-
+    public function insertionIngredientRecette($ID_Recette, $ID_Ingredient, $quantité){
+        try {
+            $requete = " INSERT INTO `ingredient_recette`(ID_Recette, ID_Ingredient, quantité)
+            VALUES (:ID_Recette, :ID_Ingredient, :quantité)";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+            $requete_preparee->bindParam(':ID_Recette', $ID_Recette, PDO::PARAM_INT);
+            $requete_preparee->bindParam(':ID_Ingredient', $ID_Ingredient, PDO::PARAM_INT);
+            $requete_preparee->bindParam(':quantité', $quantité, PDO::PARAM_STR);
+            
+            $requete_preparee->execute();
+            echo ("insertion reussi");
+            return "insertion reussi";
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+    
     public function insertionUtilisateur($nom,$prenom,$pseudo,$mail,$mdp,$id){
         try {
             $requete = " INSERT INTO utilisateur(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
@@ -188,47 +201,7 @@ class MaConnexion{
             return $e->getMessage();
         }
     }
-
-    public function maj_Ingredient($idrecette,$ingredient_un,$ingredient_deux,$ingredient_trois,$ingredient_quatre,$ingredient_cinq,$ingredient_six,$ingredient_sept,$ingredient_huit,$ingredient_neuf,$ingredient_dix,$ingredient_onze,$ingredient_douze,$ingredient_treize,$ingredient_quatorze,$ingredient_quinz){
-        try {
-            
-            $requete = "UPDATE ingredient SET Ingredient_1 = ?,Ingredient_2 = ?, Ingredient_3 = ?,Ingredient_4 = ?, Ingredient_5 = ?, 
-                Ingredient_6 = ?, Ingredient_7 = ?,Ingredient_8 = ?,Ingredient_9 = ?,Ingredient_10 = ?,Ingredient_11 = ?,Ingredient_12 = ?,
-                Ingredient_13 = ?, Ingredient_14 = ?, Ingredient_15 = ?
-            WHERE ID_Recette = ?";
-
-        $requete_preparee = $this->connexionPDO->prepare($requete);
-
-        
-        $requete_preparee->bindValue(1,':Ingredient_1',$ingredient_un,PDO::PARAM_STR);
-        $requete_preparee->bindValue(2,':Ingredient_2',$ingredient_deux,PDO::PARAM_STR);
-        $requete_preparee->bindValue(3,':Ingredient_3',$ingredient_trois,PDO::PARAM_STR);
-        $requete_preparee->bindValue(4,':Ingredient_4',$ingredient_quatre,PDO::PARAM_STR);
-        $requete_preparee->bindValue(5,':Ingredient_5',$ingredient_cinq,PDO::PARAM_STR);
-        $requete_preparee->bindValue(6,':Ingredient_6',$ingredient_six,PDO::PARAM_STR);
-        $requete_preparee->bindValue(7,':Ingredient_7',$ingredient_sept,PDO::PARAM_STR);
-        $requete_preparee->bindValue(8,':Ingredient_8',$ingredient_huit,PDO::PARAM_STR);
-        $requete_preparee->bindValue(9,':Ingredient_9',$ingredient_neuf,PDO::PARAM_STR);
-        $requete_preparee->bindValue(10,':Ingredient_10',$ingredient_dix,PDO::PARAM_STR);
-        $requete_preparee->bindValue(11,':Ingredient_11',$ingredient_onze,PDO::PARAM_STR);
-        $requete_preparee->bindValue(12,':Ingredient_12',$ingredient_douze,PDO::PARAM_STR);
-        $requete_preparee->bindValue(13,':Ingredient_13',$ingredient_treize,PDO::PARAM_STR);
-        $requete_preparee->bindValue(14,':Ingredient_14',$ingredient_quatorze,PDO::PARAM_STR);
-        $requete_preparee->bindValue(15,':Ingredient_15',$ingredient_quinz,PDO::PARAM_STR);
-        $requete_preparee->bindValue(16,':ID_Recette',$idrecette,PDO::PARAM_STR);
-        
-
-
-        $requete_preparee->execute();
-        echo ("modification reussi");
-        return "modification reussi";
-
-
-
-        } catch (PDOException $e) {
-            return $e->getMessage();
-        }
-    }
+    
     // Fonction de suppression des recettes(fonctionne)
     public function deleteRecette($idRecette){
         try{
@@ -249,6 +222,7 @@ class MaConnexion{
         try {
             $requete = "SELECT * from $table";
             $resultat = $this->connexionPDO->query($requete);
+            
             $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC);
             return $resultat;
         
@@ -266,7 +240,10 @@ class MaConnexion{
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
-// $inser = $test->insertionUtilisateur("ba","ba","baba","bak@fe.fd","dsdsd",2);
+$message = $test->insertionIngredientRecette(1,3,"2kg de");
+
+echo $message;
+
 
 //$supp = $test->selectArticle_ID(2);
 //var_dump($supp);
