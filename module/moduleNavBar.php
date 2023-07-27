@@ -4,12 +4,22 @@
             <a class="lienNav" href="admin.php">Cours de cuisine</a>
             <a class="lienNav" href="connexion.php">Connexion</a>
             <div class="dropdown">
-                <button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
-                <div class="dropdown-content">
+                
+                    <?php
+                    echo
+                    '<button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
+                        <div class="dropdown-content">
+                        <a href="#">' . $_SESSION["idUser"] .'</a>
+                        <a href="#">' .  $_SESSION["Nom"] .'</a>
+                        <a href="#">' . $_SESSION["Prenom"] .'</a>
+                        <a href="#">'. $_SESSION["Role"] .'</a>
+                        </div>'
+                    ?>
+                <!-- <div class="dropdown-content">
                     <a href="#">Nos recettes</a>
                     <a href="#">Link 2</a>
                     <a href="#">Link 3</a>
-                </div>
+                </div> -->
             </div>
             <div class="burger dropdown">
                 <button class="dropbtn"><img src="../Images/lines_menu_burger_icon_123889_encorepluspetit.png" alt=""></button>
@@ -20,3 +30,5 @@
                 </div>
             </div>
         </nav>
+
+        
