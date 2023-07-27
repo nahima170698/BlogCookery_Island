@@ -219,6 +219,22 @@ class MaConnexion{
         }
     }
 
+    public function deleteIngredientRecette($ID_Recette,$ID_Ingredient){
+        try{
+            $requete = "DELETE FROM ingredient_recette WHERE ID_Recette =  ? AND ID_Ingredient = ?";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+            
+            $requete_preparee->bindvalue(1,$ID_Recette,PDO::PARAM_INT);
+            $requete_preparee->bindParam(2, $ID_Ingredient, PDO::PARAM_INT);
+            $requete_preparee->execute();
+            echo 'suppression reussie';
+            return $requete_preparee;
+
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+        }
+    }
+    
     public function select($table){
         try {
             $requete = "SELECT * from $table";
@@ -232,12 +248,7 @@ class MaConnexion{
         }  
     }
 
-    
-
-    
 }
-
-
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
