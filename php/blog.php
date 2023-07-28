@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 ?>
 <?php include "BDD/connexionbdd.php" ?>
 <html lang="en">
@@ -28,8 +27,7 @@ var_dump($_SESSION);
         <section class="sectionCarte">
             <h2><img class="icone" src="../Images\icone_entrée1.png" alt="Entrées"> Nos entrées</h2>
             <div class="carteContainer">
-                
-                
+                  
             <?php
             $Entrée = $test->selectRecette_Categorie("Entrée");
             foreach ($Entrée as $uneDonnees){

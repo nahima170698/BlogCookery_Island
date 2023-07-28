@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 ?>
 <?php include "BDD/connexionbdd.php" ?>
 <!DOCTYPE html>
@@ -118,11 +117,11 @@ var_dump($_SESSION);
                         <th>Catégorie:</th>
                         <th>logo catégorie:</th>
                         <th>Temps de preparation :</th>
-                        <th>Difficulté:</th>
                         <th>Texte 1:</th>
-                        <th>Texte 2 :</th>
                         <th>Lien vers image 1:</th>
+                        <th>Texte 2 :</th>
                         <th>Lien vers image 2:</th>
+                        <th>Difficulté:</th>
                         <th>Action:</th>
                     </thead>
                     <tbody>

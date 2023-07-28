@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,16 +18,46 @@ var_dump($_SESSION);
         <nav>
             <a href="index.php"><img src="Images/Logo.Cookery_Island.png" alt=""></a>
             <a class="lienNav" href="php\blog.php">Nos recettes</a>
-            <a class="lienNav" href="php\article.php">Cours de cuisine</a>
+            <a class="lienNav" href="">Cours de cuisine</a>
             <a class="lienNav" href="php\connexion.php">Connexion</a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
-                <div class="dropdown-content">
-                    <a href="#">Nos recettes</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+            <?php
+
+switch (true) {
+    case empty($_SESSION["Role"]):
+        echo '<h3>Non connecté</h3>';
+        break;
+    case ($_SESSION["Role"] == 1):
+        echo '
+        <div class="dropdown">
+            <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
+            <div class="dropdown-content">
+                <p>' . $_SESSION["idUser"] .'</p>
+                <p>' .  $_SESSION["Nom"] .'</p>
+                <p>' . $_SESSION["Prenom"] .'</p>
+                <p>'. $_SESSION["Role"] .'</p>
+                <a class="lienNav" href="php/admin.php">Page admin</a>
+                <a href="">Lien vers le kill</a>
             </div>
+        </div>';
+        break;
+    case ($_SESSION["Role"] == 2):
+        echo '
+        <div class="dropdown">
+            <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
+            <div class="dropdown-content">
+                <p>' . $_SESSION["idUser"] .'</p>
+                <p>' .  $_SESSION["Nom"] .'</p>
+                <p>' . $_SESSION["Prenom"] .'</p>
+                <a href="">Lien vers le kill</a>
+            </div>
+        </div>';
+        break;
+    
+    default:
+        
+        break;
+}
+?>
             <div class="burger dropdown">
                 <button class="dropbtn"><img src="Images/lines_menu_burger_icon_123889_encorepluspetit.png" alt=""></button>
                 <div class="dropdown-content">

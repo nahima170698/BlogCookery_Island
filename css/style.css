@@ -213,7 +213,7 @@ nav a img {
 }
 
 .carte:hover {
-    transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .carteImageContainer {
@@ -223,7 +223,6 @@ nav a img {
   background: red;
   margin: 0rem auto 0 auto;
 }
-
 
 .difficulteTempsRecette {
   display: flex;
@@ -270,7 +269,7 @@ nav a img {
 }
 
 .lienVersPage:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 /*Acceuil Section Cours de cuisine*/
@@ -304,23 +303,23 @@ nav a img {
 }
 
 .lienVersPageWith50 {
-    display: block;
-    background: white;
-    width: 35%;
-    height: 2rem;
-    text-decoration: none;
-    color: black;
-    margin: 2rem auto;
-    font-family: "Trocchi", serif;
-    font-size: 20px;
-    text-align: center;
-    box-shadow: 5px 5px 10px 1px #0000008c;
-    margin-bottom: 1rem;
-    transition: 1s;
-  }
-  
-  .lienVersPageWith50:hover {
-    transform: translateY(-10px);
+  display: block;
+  background: white;
+  width: 35%;
+  height: 2rem;
+  text-decoration: none;
+  color: black;
+  margin: 2rem auto;
+  font-family: "Trocchi", serif;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 10px 1px #0000008c;
+  margin-bottom: 1rem;
+  transition: 1s;
+}
+
+.lienVersPageWith50:hover {
+  transform: translateY(-10px);
 }
 
 /*Acceuil Section Instagram*/
@@ -331,13 +330,13 @@ nav a img {
   height: 5rem;
   margin: 0 5px;
   padding: auto;
-  border-radius: 150px;  
+  border-radius: 150px;
   box-shadow: 5px 5px 10px 1px #0000008c;
   margin-bottom: 1rem;
   transition: 1s;
 }
 .fontLogo:hover {
-    transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .fontLogo i {
@@ -350,116 +349,108 @@ nav a img {
 /* Partie premiere image*/
 
 .articleImageRecetteContainer {
-    background: #e8e2da;
-    width: 50%;
-    height: 30rem;
-    margin: 1rem auto;
-    box-shadow: 5px 5px 10px 1px #0000008c;
-    padding: 0.5rem 5%;
-    
+  background: #e8e2da;
+  width: 50%;
+  height: 30rem;
+  margin: 1rem auto;
+  box-shadow: 5px 5px 10px 1px #0000008c;
+  padding: 0.5rem 5%;
 }
 
 .articleImageRecette {
-    width: 100%;
-    height: 28rem;
-    margin: auto; 
+  width: 100%;
+  height: 28rem;
+  margin: auto;
 }
 
 /* Partie ingredient */
 
 .articleIngredientContainer {
-    min-height: 10rem;
-    width: 80%;
-    margin: 2rem auto;
-    background: #e8e2da;
-    box-shadow: 5px 5px 10px 1px #0000008c;    
+  min-height: 10rem;
+  width: 80%;
+  margin: 2rem auto;
+  background: #e8e2da;
+  box-shadow: 5px 5px 10px 1px #0000008c;
 }
 
 .placementIngredient {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .placementIngredient li {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 /* Partie premier texte */
 
 .articleTextContainer {
-    min-height: 10rem;
-    width: 80%;
-    margin: 2rem auto;
-    background: #e8e2da;
-    box-shadow: 5px 5px 10px 1px #0000008c;  
-    padding: 1rem 10%;
+  min-height: 10rem;
+  width: 80%;
+  margin: 2rem auto;
+  background: #e8e2da;
+  box-shadow: 5px 5px 10px 1px #0000008c;
+  padding: 1rem 10%;
 }
 
 .articleTextContainer p {
-    white-space:pre-line;
+  white-space: pre-line;
 }
 
 /* Partie commentaire */
 
 .commentaire {
-    width: 80%;
-    margin: 2rem auto;
-    background: #e8e2da;   
-    box-shadow: 5px 5px 10px 1px #0000008c; 
-    padding: 1rem 10%;
+  width: 80%;
+  margin: 2rem auto;
+  background: #e8e2da;
+  box-shadow: 5px 5px 10px 1px #0000008c;
+  padding: 1rem 10%;
 }
 
 .commentaireUnique {
-    background: rgba(255, 255, 255, 0.59);
-    border: 1px solid black;
-    /* box-shadow: 4px 4px 6px 1px #000; */
-    margin-bottom: 2rem;
-    padding-left: 5%;
+  background: rgba(255, 255, 255, 0.59);
+  border: 1px solid black;
+  /* box-shadow: 4px 4px 6px 1px #000; */
+  margin-bottom: 2rem;
+  padding-left: 5%;
 }
 
 .commentaire p {
-    white-space:pre-line;
+  white-space: pre-line;
 }
 
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .ajoutCommentaire {
-    width: 80%;
-    min-height: 10rem;
-    margin: 2rem auto;
-    background: #e8e2da;   
-    box-shadow: 5px 5px 10px 1px #0000008c; 
-    padding: 1rem 10%;
+  width: 80%;
+  min-height: 10rem;
+  margin: 2rem auto;
+  background: #e8e2da;
+  box-shadow: 5px 5px 10px 1px #0000008c;
+  padding: 1rem 10%;
 }
 
 .createCommentaire {
-    width: 100%;
+  width: 100%;
 }
 
 .createCommentaireBouton {
-    display: block;
-    height: 2rem;
-    width: 25%;
-    font-family: "Trocchi", serif;
-    font-size: 20px;
-    background: #a3795d;
-    margin: 1rem auto;
+  display: block;
+  height: 2rem;
+  width: 25%;
+  font-family: "Trocchi", serif;
+  font-size: 20px;
+  background: #a3795d;
+  margin: 1rem auto;
 }
 
 .createCommentaireBouton:hover {
-    background: #e8e2da;
+  background: #e8e2da;
 }
-
-
-
-
-
-
-
 
 /* page admin/connexion */
 .formConnexion {
@@ -467,7 +458,6 @@ nav a img {
   display: flex;
   justify-content: space-between;
   width: 80%;
-
 }
 
 .partieConnexion {
@@ -531,14 +521,13 @@ form div {
   margin: auto;
   max-width: 95%;
   max-height: fit-content;
- 
- }
- .partieAdmin{
+}
+.partieAdmin {
   overflow-x: scroll;
   margin: 10px;
   height: fit-content;
   max-height: 87vh;
-} 
+}
 
 .partieAdmin table {
   border: 1px solid black;
@@ -550,12 +539,11 @@ form div {
   border: 1px solid black;
 }
 
-table th, table td {
-    
+table th,
+table td {
   padding: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  
 }
 
 table td {
@@ -565,25 +553,24 @@ table td {
   border: 1px solid rgb(177, 177, 177);
   padding-left: 20px;
   background-color: #00000029;
-  
 }
 
-table th{
-  position: sticky; 
+table th {
+  position: sticky;
   top: 0px;
-  
+
   background-color: #133b5c;
   color: rgb(241, 245, 179);
-  
+
   text-align: center;
   font-weight: normal;
   font-size: 18px;
   outline: 0.7px solid black;
   border: 1.5px solid black;
-} 
+}
 
 .partieAdmin textarea {
-  width:20rem;
+  width: 20rem;
   height: 20rem;
 }
 
@@ -592,7 +579,7 @@ table th{
 }
 
 .partieCreate {
-  background: rgba(106, 255, 47, 0.632)!important;
+  background: rgba(106, 255, 47, 0.632) !important;
 }
 
 .partieDelete {
@@ -602,21 +589,21 @@ table th{
 /* Partie footer */
 
 footer {
-    min-height: 6rem;
-    background: #e8e2da;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 0.5rem;
-  }
-  
-  footer img {
-    height: 5rem;
-  }
-  
-  footer p {
-    font-weight: bold;
-  }
+  min-height: 6rem;
+  background: #e8e2da;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+footer img {
+  height: 5rem;
+}
+
+footer p {
+  font-weight: bold;
+}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Navbar et header*/
@@ -654,7 +641,7 @@ footer {
   }
 
   p,
-  label{
+  label {
     font-size: 16px;
     line-height: 2rem;
     text-align: justify;
@@ -690,11 +677,11 @@ footer {
     min-height: 26rem;
   }
 
-  .lienVersPage{
+  .lienVersPage {
     width: 20%;
     margin-bottom: 1rem;
   }
-  
+
   /*Partie Cours de cuisine Accueil*/
 
   .acceuilSectionCours {
@@ -706,25 +693,45 @@ footer {
   }
 
   /* Partie article */
-  
+
   /* Partie image Article */
-  
+
   .articleImageRecetteContainer {
     width: 60%;
     height: 25rem;
   }
-  
+
   .articleImageRecette {
     height: 23rem;
   }
-}
 
-/* Partie commentaire */
-  
-.createCommentaireBouton {
+  /* Partie commentaire */
+
+  .createCommentaireBouton {
     width: 30%;
     font-size: 16px;
     line-height: 2rem;
+  }
+
+  /* Partie admin / connexion */
+  
+  .formConnexion {
+    margin: 1rem auto;
+    display: block;
+    width: 80%;
+  }
+  
+  .partieConnexion {
+    width: 80%;
+    padding: 1rem 2%;
+    margin: 1rem auto;
+  }
+
+  .partieAdmin textarea {
+    width: 20rem;
+    height: 12rem;
+  }
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -879,36 +886,55 @@ footer {
     margin-left: 30%;
   }
 
-    /* Partie article */
-  
+  /* Partie article */
+
   /* Partie image Article */
-  
+
   .articleImageRecetteContainer {
     width: 80%;
     height: 20rem;
   }
-  
+
   .articleImageRecette {
     height: 19rem;
   }
 
   /* Partie ingredient Article */
-  
-.placementIngredient {
-    grid-template-columns: 100%;
-}
 
-.placementIngredient li {
+  .placementIngredient {
+    grid-template-columns: 100%;
+  }
+
+  .placementIngredient li {
     margin-left: 10%;
-}
-  
-/* Partie commentaire */
-  
-.createCommentaireBouton {
+  }
+
+  /* Partie commentaire */
+
+  .createCommentaireBouton {
     width: 40%;
     font-size: 16px;
     line-height: 2rem;
-}
+  }
+
+    /* Partie admin / connexion */
+  
+    .formConnexion {
+      margin: 1rem auto;
+      display: block;
+      width: 100%;
+    }
+    
+    .partieConnexion {
+      width: 90%;
+      padding: 1rem 2%;
+      margin: 1rem auto;
+    }
+
+    .partieAdmin textarea {
+      width: 20rem;
+      height: 8rem;
+    }
   
   footer {
     min-height: 4rem;
@@ -917,12 +943,12 @@ footer {
   footer img {
     height: 5rem;
   }
-  
+
   footer p {
     font-weight: bold;
     width: 70%;
     text-align: center;
     margin-top: 0.5rem;
-    white-space:pre-line;
+    white-space: pre-line;
   }
 }

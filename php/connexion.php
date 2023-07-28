@@ -35,7 +35,7 @@ session_start();
                 </div>
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="connexionMotDePasse">Mot de passe:</label>
-                    <input class="tailleInput" id="connexionMotDePasse" type="text" name="mdp" placeholder="Mot de passe">
+                    <input class="tailleInput" id="connexionMotDePasse" type=" password" name="mdp" placeholder="Mot de passe">
                 </div>
 
                 <input class="boutonFormulaire" type="submit" name="" id="">
