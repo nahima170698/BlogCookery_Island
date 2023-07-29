@@ -435,6 +435,20 @@ nav a img {
   font-weight: bold;
 }
 
+.boutonCommentaire {
+  display: block;
+  height: 2rem;
+  width: 25%;
+  font-family: "Trocchi", serif;
+  font-size: 20px;
+  background: red;
+  margin: 1rem 0 1rem 70%;
+}
+
+.boutonCommentaire:hover {
+  background: #e8e2da;
+}
+
 .ajoutCommentaire {
   width: 80%;
   min-height: 10rem;
