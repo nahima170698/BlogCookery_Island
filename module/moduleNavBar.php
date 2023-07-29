@@ -16,12 +16,12 @@ switch (true) {
         <div class="dropdown">
             <button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
             <div class="dropdown-content">
-                <p>' . $_SESSION["idUser"] .'</p>
-                <p>' .  $_SESSION["Nom"] .'</p>
-                <p>' . $_SESSION["Prenom"] .'</p>
-                <p>'. $_SESSION["Role"] .'</p>
+            <div class="positionText">
+                <h3>' .  $_SESSION["Nom"] .'</h3>
+                <h3>'. $_SESSION["Prenom"].'</h3>
+            </div>
                 <a class="lienNav" href="admin.php">Page admin</a>
-                <a href="">Lien vers le kill</a>
+                <a href="BDD/sessionKill.php">Déconnexion</a>
             </div>
         </div>';
         break;
@@ -30,10 +30,11 @@ switch (true) {
         <div class="dropdown">
             <button class="dropbtn"><img class="logoProfil" src="../Images/profil.png" alt=""></button>
             <div class="dropdown-content">
-                <p>' . $_SESSION["idUser"] .'</p>
-                <p>' .  $_SESSION["Nom"] .'</p>
-                <p>' . $_SESSION["Prenom"] .'</p>
-                <a href="">Lien vers le kill</a>
+            <div class="positionText">
+                <h3>' .  $_SESSION["Nom"] .'</h3>
+                <h3>'. $_SESSION["Prenom"].'</h3>
+            </div>
+                <a href="BDD/sessionKill.php">Déconnexion</a>
             </div>
         </div>';
         break;

@@ -53,7 +53,7 @@ session_start();
                     <label class="tailleLabel" for="inscriptionNom">Nom:</label>
                     <input class="tailleInput" id="inscriptionNom" type="text" placeholder="Nom" name="Nom">
                 </div>
-
+                
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionPrenom">Prenom:</label>
                     <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom" name="Prenom">

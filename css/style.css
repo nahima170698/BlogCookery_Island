@@ -83,10 +83,13 @@ nav a img {
 .dropdown-content {
   display: none;
   position: absolute;
+  text-align: center;
+  align-items: center;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 400%;
   box-shadow: 5px 5px 10px 1px #0000008c;
   z-index: 1;
+  left: -300%;
 }
 
 /* Links inside the dropdown */
@@ -105,6 +108,13 @@ nav a img {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.positionText {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
 }
 
 /* MENU BURGER */
