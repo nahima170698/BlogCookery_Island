@@ -8,9 +8,10 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../Images/Logo.Cookery_Island.png" />
+    <title>Cookery_Island Administrateur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -116,11 +117,11 @@ session_start();
                         <th>Catégorie:</th>
                         <th>logo catégorie:</th>
                         <th>Temps de preparation :</th>
-                        <th>Difficulté:</th>
                         <th>Texte 1:</th>
-                        <th>Texte 2 :</th>
                         <th>Lien vers image 1:</th>
+                        <th>Texte 2 :</th>
                         <th>Lien vers image 2:</th>
+                        <th>Difficulté:</th>
                         <th>Action:</th>
                     </thead>
                     <tbody>
@@ -156,12 +157,12 @@ session_start();
             </div>
         </div>
 
-        <!-- Modal Fonction Delete-->
+        <!-- Modal Fonction Delete Recette-->
         <?php
         foreach ($recettes as $uneDonnees) {
             echo
             '<form method="POST" action="BDD/deleteRecette.php">
-        <div class="modal fade" id="fonctionDelete'.$uneDonnees['ID_Recette'].'" tabindex="-1" aria-labelledby="exampleModalLabel' . $uneDonnees['ID_Recette'] . '" aria-hidden="true">
+        <div class="modal fade" id="fonctionDelete' . $uneDonnees['ID_Recette'] . '" tabindex="-1" aria-labelledby="exampleModalLabel' . $uneDonnees['ID_Recette'] . '" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -181,13 +182,14 @@ session_start();
         <input type="hidden" name="ID_Recette" value="' . $uneDonnees['ID_Recette'] . '">
     </form>';
         }
+
         ?>
 
         <h3>Gestion des ingredients</h3>
 
         <section class="formConnexion">
 
-            <div class="partieConnexion">
+            <div class="partieConnexion partieCreate">
                 <h3>Ajout d'ingredient a la liste</h3>
                 <form action="BDD/insertionIngredient.php" method="POST">
                     <div class="placementLabelFormulaire">
@@ -199,15 +201,15 @@ session_start();
             </div>
 
 
-            <div class="partieConnexion">
+            <div class="partieConnexion partieCreate">
                 <h3>Liaison d'ingredient aux recettes</h3>
                 <form action="BDD/liaisonIngredientRecette.php" method="POST">
                     <div class="placementLabelFormulaire">
                         <label class="tailleLabel" for="choixRecette">Ajout dans cette recette:</label>
                         <select class="tailleInput" id="choixRecette" name="ID_Recette" required>
                             <?php
-                            foreach ($recettes as $uneDonnees){
-                            echo '<option value="'.$uneDonnees['ID_Recette'].'">'.$uneDonnees['Nom_Recette'].'</option>';
+                            foreach ($recettes as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Recette'] . '">' . $uneDonnees['Nom_Recette'] . '</option>';
                             }
                             ?>
                         </select>
@@ -215,10 +217,10 @@ session_start();
                     <div class="placementLabelFormulaire">
                         <label class="tailleLabel" for="choixIngredient">Ingredient a ajouter:</label>
                         <select class="tailleInput" id="choixIngredient" name="ID_Ingredient" required>
-                        <?php
+                            <?php
                             $ingredients = $test->select("ingredient");
-                            foreach ($ingredients as $uneDonnees){
-                            echo '<option value="'.$uneDonnees['ID_Ingredient'].'">'.$uneDonnees['Nom_Ingredient'].'</option>';
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
                             }
                             ?>
                         </select>
@@ -229,30 +231,76 @@ session_start();
                     </div>
                     <input class="boutonFormulaire" type="submit">
                 </form>
-            
 
-            
             </div>
 
         </section>
-    </main>
+
+        <section class="formConnexion">
+
+            <div class="partieConnexion partieDelete">
+                <h3>Ajout d'ingredient a la liste</h3>
+                <form action="BDD/suppressionIngredient.php" method="POST">
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="suppIngredient">Ingredient a supprimer:</label>
+                        <select class="tailleInput" id="suppIngredient" name="ID_Ingredient" required>
+                            <?php
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <input class="boutonFormulaire" type="submit">
+                </form>
+            </div>
+
+            <div class="partieConnexion partieDelete">
+                <h3>Suppression d'ingredient aux recettes</h3>
+                <form action="BDD/suppressionIngredientRecette.php" method="POST">
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="choixRecette2">Supprimer dans cette recette:</label>
+                        <select class="tailleInput" id="choixRecette2" name="ID_Recette" required>
+                            <?php
+                            foreach ($recettes as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Recette'] . '">' . $uneDonnees['Nom_Recette'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="placementLabelFormulaire">
+                        <label class="tailleLabel" for="choixIngredient">Ingredient a ajouter:</label>
+                        <select class="tailleInput" id="choixIngredient" name="ID_Ingredient" required>
+                            <?php
+                            foreach ($ingredients as $uneDonnees) {
+                                echo '<option value="' . $uneDonnees['ID_Ingredient'] . '">' . $uneDonnees['Nom_Ingredient'] . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <input class="boutonFormulaire" type="submit">
+                </form>
+
+            </div>
+        </section>
 
 
-    <!-- <div class="placementLabelFormulaire">
+
+        <!-- <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="ingredient_1">Premier ingrédient:</label>
                     <input class="tailleInput" id="ingredient_1" type="text" placeholder="Premier ingrédient" name="ingredient_un">
                 </div> -->
-    <footer>
-        <?php
-        include "../module/moduleFooter.php";
-        ?>
-    </footer>
+        <footer>
+            <?php
+            include "../module/moduleFooter.php";
+            ?>
+        </footer>
 
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

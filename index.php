@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookery_Island Acceuil</title>
     <link rel="shortcut icon" href="Images/Logo.Cookery_Island.png" />
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,16 +18,47 @@
         <nav>
             <a href="index.php"><img src="Images/Logo.Cookery_Island.png" alt=""></a>
             <a class="lienNav" href="php\blog.php">Nos recettes</a>
-            <a class="lienNav" href="php\article.php">Cours de cuisine</a>
+            <a class="lienNav" href="">Cours de cuisine</a>
             <a class="lienNav" href="php\connexion.php">Connexion</a>
-            <div class="dropdown">
-                <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
-                <div class="dropdown-content">
-                    <a href="#">Nos recettes</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+            <?php
+
+switch (true) {
+    case empty($_SESSION["Role"]):
+        echo '<h3>Non connecté</h3>';
+        break;
+    case ($_SESSION["Role"] == 1):
+        echo '
+        <div class="dropdown">
+            <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
+            <div class="dropdown-content">
+            <div class="positionText">
+                <h3>' .  $_SESSION["Nom"] .'</h3>
+                <h3>'. $_SESSION["Prenom"].'</h3>
             </div>
+                <a class="lienNav" href="admin.php">Page admin</a>
+                <a href="php/BDD/sessionKill.php">Déconnexion</a>
+            </div>
+        </div>';
+        break;
+    case ($_SESSION["Role"] == 2):
+        echo '
+        <div class="dropdown">
+            <button class="dropbtn"><img class="logoProfil" src="Images/profil.png" alt=""></button>
+            <div class="dropdown-content">
+            <div class="positionText">
+                <h3>' .  $_SESSION["Nom"] .'</h3>
+                <h3>'. $_SESSION["Prenom"].'</h3>
+            </div>
+                <a href="php/BDD/sessionKill.php">Déconnexion</a>
+            </div>
+        </div>';
+        break;
+    
+    default:
+        
+        break;
+}
+?>
             <div class="burger dropdown">
                 <button class="dropbtn"><img src="Images/lines_menu_burger_icon_123889_encorepluspetit.png" alt=""></button>
                 <div class="dropdown-content">
@@ -39,7 +73,7 @@
         </div>
     </header>
     <main>
-
+        
         <!-- Premiere section 
         Partie presentation -->
 
@@ -70,7 +104,7 @@
             <div class="carteContainer">
                 
                 <div class="carte">
-                    <img class="carteImageContainer" src="Images/Breakfast.jpg" alt="">
+                    <img class="carteImageContainer" src="Images/Breakfast.jpg" alt="Breakfast">
                     <div class="difficulteTempsRecette">
                         <p>Facile</p>
                         <p>30 min</p>
@@ -78,15 +112,14 @@
                     <h3>Breakfast</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="Images/istockphoto-1183041351-612x612-modified.png" alt="">
-                            <p>Recette francaise</p>
+                            <img class="icone" src="Images\icone_entrée1.png" alt="Icone entrée">
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
                 
                 <div class="carte">
-                    <img class="carteImageContainer" src="Images/Pizza.jpg" alt="">
+                    <img class="carteImageContainer" src="Images/Pizza.jpg" alt="Pizza">
                     <div class="difficulteTempsRecette">
                         <p>Moyen</p>
                         <p>120 min</p>
@@ -94,16 +127,14 @@
                     <h3>Pizza</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="Images/iconePlat (2)-modified.png" alt="">
-                            <p>recette réunionnaise</p>
-                        
+                            <img class="icone" src="Images/iconePlat (2)-modified.png" alt="Plat">                        
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>
                 </div>
                 
                 <div class="carte">
-                    <img class="carteImageContainer" src="Images/MilleFeulle.jpg" alt="">
+                    <img class="carteImageContainer" src="Images/MilleFeulle.jpg" alt="Mille feuille">
                     <div class="difficulteTempsRecette">
                         <p>Difficile</p>
                         <p>210 min</p>
@@ -111,8 +142,7 @@
                     <h3>Mille Feulle</h3>
                     <div class="difficulteTempsRecette">
                         <div>
-                            <img class="icone" src="Images/dessert-modified.png" alt="">
-                            <p>recette indienne</p>
+                            <img class="icone" src="Images\Icone-dessert.png" alt="Icone dessert">
                         </div>
                         <input class="boutonCarte" type="button" value="Voir article">
                     </div>

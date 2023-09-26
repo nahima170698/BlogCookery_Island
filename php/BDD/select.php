@@ -21,11 +21,9 @@ if (!empty($select)) {
         $_SESSION["idUser"]=$select[0]["Pseudo"] and
         $_SESSION["Nom"]=$select[0]["Nom"] and
         $_SESSION["Prenom"]=$select[0]["Prenom"] and
+        $_SESSION["ID_Utilisateur"]=$select[0]["ID_Utilisateur"] and
         $_SESSION["Role"]=$select[0]["ID_Role"];
-
         
-
-
         echo "its ok";
     } else{
         echo " nop en fait";
@@ -42,6 +40,7 @@ if (!empty($select)) {
 }
 var_dump($_SESSION);
 
+header("Location: ../../index.php");
 ?>
 
 

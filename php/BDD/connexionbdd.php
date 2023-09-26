@@ -24,6 +24,20 @@ class MaConnexion{
         }        
     }
 
+    //Fonction qui selectionne tous les elements d'une table
+    public function select($table){
+        try {
+            $requete = "SELECT * from $table";
+            $resultat = $this->connexionPDO->query($requete);
+                
+            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC);
+            return $resultat;
+            
+        } catch (PDOException $e) {
+                echo "Erreur : ".$e->getMessage();
+        }  
+    }
+
     //fonction pour selectionner des elements dans la bdd
     public function selectUtilisateur($identifiant, $mdp){
         try {
@@ -91,6 +105,26 @@ class MaConnexion{
         }
     }
 
+    // Fonction selection des commentaire et leurs editeurs par rapport a la recette 
+    public function selectCommentaireUtilisateurRecette($idRecette){
+        
+        try {
+            $requete = "SELECT * FROM `commentaire`  
+                INNER JOIN utilisateur ON utilisateur.ID_Utilisateur = commentaire.ID_Utilisateur 
+                where commentaire.ID_Recette = ?";
+            
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+
+            $requete_preparee->bindValue(1, $idRecette, PDO::PARAM_STR);
+
+            $resultat = $requete_preparee->execute();
+            $resultat = $requete_preparee->fetchAll(PDO::FETCH_ASSOC);
+            return $resultat;
+        } catch (PDOException $error) {
+            return "Erreur : " . $error->getMessage();
+        }
+    }
+    
     // Fonction d'insertion des recettes (fonctionne)
     public function insertionRecette($nomRecette,$categorie,$tempsPrepa,$difficulte,$texte_un,$texte_deux,$image_un,$image_deux,$logoCategorie){
         try {
@@ -116,7 +150,8 @@ class MaConnexion{
             return $e->getMessage();
         }
     }
-
+    
+    //Fonction d'insertion d'ingredient
     public function insertionIngredient($ingredient){
         try {
             $requete = " INSERT INTO ingredient(Nom_Ingredient)
@@ -131,7 +166,8 @@ class MaConnexion{
             return $e->getMessage();
         }
     }
-
+    
+    //Fonction qui relie un ingredient a une recette
     public function insertionIngredientRecette($ID_Recette, $ID_Ingredient, $quantite){
         try {
             $requete = " INSERT INTO `ingredient_recette`(ID_Recette, ID_Ingredient, quantite)
@@ -150,6 +186,7 @@ class MaConnexion{
         }
     }
     
+    //Fonction d'insertion d'utilisateur (abonnement)
     public function insertionUtilisateur($nom,$prenom,$pseudo,$mail,$mdp,$id){
         try {
             $requete = " INSERT INTO utilisateur(Nom, Prenom,Pseudo,Adresse_Mail,Mot_De_Passe,ID_Role)
@@ -171,6 +208,26 @@ class MaConnexion{
             return $e->getMessage();
         }
     }
+
+    //Fonction qui relie un ingredient a une recette
+    public function insertionCommentaire($ID_Recette, $ID_Utilisateur, $Commentaire){
+        try {
+            $requete = " INSERT INTO `commentaire`(ID_Recette, ID_Utilisateur, Commentaire)
+            VALUES (:ID_Recette, :ID_Utilisateur, :Commentaire)";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+            
+            $requete_preparee->bindParam(':ID_Recette', $ID_Recette, PDO::PARAM_INT);
+            $requete_preparee->bindParam(':ID_Utilisateur', $ID_Utilisateur, PDO::PARAM_INT);
+            $requete_preparee->bindParam(':Commentaire', $Commentaire, PDO::PARAM_STR);
+            
+            $requete_preparee->execute();
+            echo ("insertion reussi");
+            return "insertion reussi";
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
     // Fonction de mis à jour des recettes (fonctionne)
     public function maj_Recette($nomRecette,$categorie,$tempsPrepa,$difficulte,$texte_un,$texte_deux,$image_un,$image_deux,$logoCategorie,$idRecette){
         try {
@@ -202,6 +259,30 @@ class MaConnexion{
             return $e->getMessage();
         }
     }
+
+        // Fonction de mis à jour des commentaires (fonctionne)
+    public function maj_Commentaire($ID_Utilisateur,$ID_Recette,$Commentaire,$ID_Commentaire){
+        try { 
+            $requete = "UPDATE commentaire SET ID_Utilisateur = ?, ID_Recette = ?, Commentaire = ?
+                WHERE ID_Commentaire = ?";
+            
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+
+            $requete_preparee->bindValue(1,$ID_Utilisateur,PDO::PARAM_INT);
+            $requete_preparee->bindValue(2,$ID_Recette,PDO::PARAM_INT);
+            $requete_preparee->bindValue(3,$Commentaire,PDO::PARAM_STR);
+            $requete_preparee->bindValue(4,$ID_Commentaire,PDO::PARAM_INT);
+
+
+            $requete_preparee->execute();
+
+            echo("mise a jour reussi");
+            return "mise a jour reussi";
+        
+        } catch(PDOException $e) {
+            return $e->getMessage();
+        }
+    }
     
     // Fonction de suppression des recettes(fonctionne)
     public function deleteRecette($idRecette){
@@ -218,33 +299,65 @@ class MaConnexion{
             echo 'Erreur : ' . $e->getMessage();
         }
     }
-
-    public function select($table){
-        try {
-            $requete = "SELECT * from $table";
-            $resultat = $this->connexionPDO->query($requete);
+    
+    //Fonction qui supprime un lien entre une recette et un ingredient
+    public function deleteIngredientRecette($ID_Recette,$ID_Ingredient){
+        try{
+            $requete = "DELETE FROM ingredient_recette WHERE ID_Recette =  ? AND ID_Ingredient = ?";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
             
-            $resultat = $resultat->fetchAll(PDO::FETCH_ASSOC);
-            return $resultat;
-        
+            $requete_preparee->bindvalue(1,$ID_Recette,PDO::PARAM_INT);
+            $requete_preparee->bindParam(2, $ID_Ingredient, PDO::PARAM_INT);
+            $requete_preparee->execute();
+            echo 'suppression reussie';
+            return $requete_preparee;
+
         } catch (PDOException $e) {
-            echo "Erreur : ".$e->getMessage();
-        }  
+            echo 'Erreur : ' . $e->getMessage();
+        }
+    }
+    
+    //Fonction qui supprime un ingredient
+    public function deleteIngredient($ID_Ingredient){
+        try{
+            $requete = "DELETE FROM ingredient WHERE ID_Ingredient = ?";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+            
+            $requete_preparee->bindParam(1, $ID_Ingredient, PDO::PARAM_INT);
+            $requete_preparee->execute();
+            echo 'suppression reussie';
+            return $requete_preparee;
+
+        } catch (PDOException $e) {
+            echo 'Erreur : ' . $e->getMessage();
+        }
+    }
+    
+    //Fonction qui supprime un commentaire
+    public function deleteCommentaire($ID_Commentaire){
+        try{
+            $requete = "DELETE FROM commentaire WHERE ID_Commentaire = ?";
+            $requete_preparee = $this->connexionPDO->prepare($requete);
+                
+            $requete_preparee->bindParam(1, $ID_Commentaire, PDO::PARAM_INT);
+            $requete_preparee->execute();
+            echo 'suppression reussie';
+            return $requete_preparee;
+    
+        } catch (PDOException $e) {
+                echo 'Erreur : ' . $e->getMessage();
+        }
     }
 
-    
-
-    
 }
-
-
 
 $test = new MaConnexion("cookery_island", "", "root", "localhost");
 
-//$supp = $test->selectArticle_ID(2);
-//var_dump($supp);
-//$supp = $test->insertionIngredient('ingredient');
-//var_dump($supp);
+
+// $supp = $test->maj_Commentaire(18, 2, 'test de mise a jour', 4);
+// var_dump($supp);
+// $supp = $test->deleteCommentaire(3);
+// var_dump($supp);
 //$inserting = $test->maj_Ingredient("ingréeza","ezngré","ingezré","ingzaré","ingezaé","ingezaé","inezagré","ingrezaé","inggré","ingrfré","ingré","ingré","ingré","ingré","ingré",1);
 //var_dump($inserting);
 // $maj = $test->maj_Recette("");

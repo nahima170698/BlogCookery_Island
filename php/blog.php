@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 ?>
 <?php include "BDD/connexionbdd.php" ?>
 <html lang="en">
@@ -26,17 +25,16 @@ var_dump($_SESSION);
                     <!-- Partie Entrée -->
         
         <section class="sectionCarte">
-            <h2><img class="icone" src="../Images\icone_entrée1.png" alt=""> Nos entrées</h2>
+            <h2><img class="icone" src="../Images\icone_entrée1.png" alt="Entrées"> Nos entrées</h2>
             <div class="carteContainer">
-                
-                
+                  
             <?php
             $Entrée = $test->selectRecette_Categorie("Entrée");
             foreach ($Entrée as $uneDonnees){
             echo '
             <form action="article.php" method="post">
                 <div class="carte">
-                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$uneDonnees["Nom_Recette"].'">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>
@@ -44,7 +42,7 @@ var_dump($_SESSION);
                     <h3>'.$uneDonnees["Nom_Recette"].'</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
+                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="Entrée">
                         </div>
                         <input class="boutonCarte" type="submit" value="Voir article">
                     </div>
@@ -59,17 +57,17 @@ var_dump($_SESSION);
                       <!-- Partie Plats -->
         
                       <section class="sectionCarte">
-            <h2><img class="icone" src="../Images/iconePlat (2)-modified.png" alt=""> Nos plats</h2>
+            <h2><img class="icone" src="../Images/iconePlat (2)-modified.png" alt="Plats"> Nos plats</h2>
             <div class="carteContainer">
                 
-
+            
             <?php
             $Plats = $test->selectRecette_Categorie("Plats");
             foreach ($Plats as $uneDonnees){
             echo '
             <form action="article.php" method="post">
                 <div class="carte">
-                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$uneDonnees["Nom_Recette"].'">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>
@@ -77,7 +75,7 @@ var_dump($_SESSION);
                     <h3>'.$uneDonnees["Nom_Recette"].'</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
+                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="Plats">
                         </div>
                         <input class="boutonCarte" type="submit" value="Voir article">
                     </div>
@@ -88,21 +86,21 @@ var_dump($_SESSION);
             ?>
             </div>
         </section>
-
+                  
                   <!-- Partie Dessert -->
         
                   <section class="sectionCarte">
-            <h2><img class="icone" src="../Images\Icone-dessert.png" alt=""> Nos desserts</h2>
+            <h2><img class="icone" src="../Images\Icone-dessert.png" alt="Dessert"> Nos desserts</h2>
             <div class="carteContainer">
                 
-
+            
             <?php
             $Dessert = $test->selectRecette_Categorie("Dessert");
             foreach ($Dessert as $uneDonnees){
             echo '
             <form action="article.php" method="post">
                 <div class="carte">
-                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="">
+                    <img class="carteImageContainer" src="../'.$uneDonnees["Image_Un"].'" alt="'.$uneDonnees["Nom_Recette"].'">
                     <div class="difficulteTempsRecette">
                         <p>'.$uneDonnees["Difficulte"].'</p>
                         <p>'.$uneDonnees["Temps_Preparation"].'</p>
@@ -110,7 +108,7 @@ var_dump($_SESSION);
                     <h3>'.$uneDonnees["Nom_Recette"].'</h3>
                     <div class="difficulteTempsRecette">
                         <div class="iconeContainer">
-                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="">
+                            <img class="icone" src="../'.$uneDonnees["Categorie_Logo"].'" alt="Desserts">
                         </div>
                         <input class="boutonCarte" type="submit" value="Voir article">
                     </div>
