@@ -1,15 +1,15 @@
 <nav>
-            <a href="../index.php"><img src="../Images/Logo.Cookery_Island.png" alt="Logo Cookery Island"></a>
+            <a href="../index.php"><img src="../../Images/Logo.Cookery_Island.png" alt="Logo Cookery Island"></a>
             <a class="lienNav" href="blog.php">Nos recettes</a>
             <a class="lienNav" href="">Cours de cuisine</a>
-            <a class="lienNav" href="connexion.php">Connexion</a>
             
                 
             <?php
 
 switch (true) {
     case empty($_SESSION["Role"]):
-        echo '<h3>Non connecté</h3>';
+        echo '<a class="lienNav" href="connexion.php">Connexion</a>';
+
         break;
     case ($_SESSION["Role"] == 1):
         echo '

@@ -30,12 +30,12 @@ session_start();
             <h3>Connectez-vous</h3>
             <form action="BDD/select.php" method="POST">
                 <div class="placementLabelFormulaire">
-                    <label class="tailleLabel" for="connexionUtilisateur">Utilisateur:</label>
-                    <input class="tailleInput" id="connexionUtilisateur" type="text" name= "identifiant" placeholder="Utilisateur">
+                    <label class="tailleLabel" for="connexionUtilisateur">Email:</label>
+                    <input class="tailleInput" id="connexionUtilisateur" type="email" name= "email" placeholder="myname@example.com">
                 </div>
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="connexionMotDePasse">Mot de passe:</label>
-                    <input class="tailleInput" id="connexionMotDePasse" type=" password" name="mdp" placeholder="Mot de passe">
+                    <input class="tailleInput" id="connexionMotDePasse" type= "password" name="mdp" placeholder="Mot de passe">
                 </div>
 
                 <input class="boutonFormulaire" type="submit" name="" id="">
@@ -55,13 +55,13 @@ session_start();
                 </div>
                 
                 <div class="placementLabelFormulaire">
-                    <label class="tailleLabel" for="inscriptionPrenom">Prenom:</label>
-                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prenom" name="Prenom">
+                    <label class="tailleLabel" for="inscriptionPrenom">Prénom:</label>
+                    <input class="tailleInput" id="inscriptionPrenom" type="text" placeholder="Prénom" name="Prenom">
                 </div>
 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionAdresseMail">Adresse email:</label>
-                    <input class="tailleInput" id="inscriptionAdresseMail" type="text" placeholder="AdresseMail" name="AdresseEmail">
+                    <input class="tailleInput" id="inscriptionAdresseMail" type="email" placeholder="myname@example.com" name="AdresseEmail">
                 </div>             
                 
                 <div class="placementLabelFormulaire">
@@ -71,7 +71,7 @@ session_start();
                 
                 <div class="placementLabelFormulaire">
                     <label class="tailleLabel" for="inscriptionMotDePasse">Mot de passe:</label>
-                    <input class="tailleInput" id="inscriptionMotDePasse" type="text" placeholder="Mot de passe" name="Mot_De_Passe">
+                    <input class="tailleInput" id="inscriptionMotDePasse" type="password" placeholder="Mot de passe" name="Mot_De_Passe">
                 </div>
                 
                 <input type="hidden" name="ID_Role" value="2">

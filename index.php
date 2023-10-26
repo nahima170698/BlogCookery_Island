@@ -19,12 +19,11 @@ session_start();
             <a href="index.php"><img src="Images/Logo.Cookery_Island.png" alt=""></a>
             <a class="lienNav" href="php\blog.php">Nos recettes</a>
             <a class="lienNav" href="">Cours de cuisine</a>
-            <a class="lienNav" href="php\connexion.php">Connexion</a>
             <?php
 
 switch (true) {
     case empty($_SESSION["Role"]):
-        echo '<h3>Non connecté</h3>';
+        echo '<a class="lienNav" href="php\connexion.php">Connexion</a>';
         break;
     case ($_SESSION["Role"] == 1):
         echo '

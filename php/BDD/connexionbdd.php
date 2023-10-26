@@ -39,12 +39,12 @@ class MaConnexion{
     }
 
     //fonction pour selectionner des elements dans la bdd
-    public function selectUtilisateur($identifiant, $mdp){
+    public function selectUtilisateur($email, $mdp){
         try {
-            $requete = "SELECT * from utilisateur where Pseudo = :identifiant and Mot_De_Passe = :mdp";
+            $requete = "SELECT * from utilisateur where email = :email and Mot_De_Passe = :mdp";
 
             $requete_preparee = $this->connexionPDO->prepare($requete);
-            $requete_preparee->bindParam(":identifiant", $identifiant,PDO::PARAM_STR);
+            $requete_preparee->bindParam(":email", $email,PDO::PARAM_STR);
             $requete_preparee->bindParam(":mdp", $mdp,PDO::PARAM_STR);
             $resultat = $requete_preparee->execute();
             $resultat = $requete_preparee->fetchAll(PDO::FETCH_ASSOC);

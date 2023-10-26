@@ -8,6 +8,10 @@ body {
   background: #a3795d;
 }
 
+main{
+  min-height: 70vh;
+}
+
 h1 {
   font-family: "Calistoga", cursive;
   font-size: 70px;
@@ -502,7 +506,7 @@ nav a img {
   width: 30%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .tailleInput {

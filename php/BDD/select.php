@@ -7,7 +7,7 @@ $selection = new MaConnexion("cookery_island", "", "root", "localhost");
 // $test = $selection->select('utilisateur');
 // var_dump($test);
 
-$select = $selection->selectUtilisateur($_POST['identifiant'], $_POST['mdp']);
+$select = $selection->selectUtilisateur($_POST['email'], $_POST['mdp']);
 var_dump($_POST);
 var_dump($select);
 
